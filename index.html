@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fábio Fila — Desenvolvedor Back-End / Full Stack</title>
+  <meta name="description" content="Fábio Fila — Desenvolvedor Back-End / Full Stack com +25 anos de experiência em PHP, Laravel, integrações e e-commerce. Desenvolvimento potencializado por IA (Claude Code)." />
+  <meta name="author" content="Fábio Fila" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fábio Fila — Desenvolvedor Back-End / Full Stack" />
+  <meta property="og:description" content="+25 anos desenvolvendo sistemas escaláveis, integrações e e-commerce. PHP, Laravel e desenvolvimento potencializado por IA." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>FF</text></svg>" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__brand" aria-label="Início">
+        <span class="nav__logo">FF</span>
+        <span class="nav__name">Fábio&nbsp;Fila</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+        <a href="#skills" data-i18n="nav.skills">Competências</a>
+        <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
+        <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="#ia" data-i18n="nav.ai">IA</a>
+        <a href="#contato" data-i18n="nav.contact">Contato</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn-icon" id="langToggle" aria-label="Trocar idioma" title="PT / EN">
+          <span id="langLabel">EN</span>
+        </button>
+        <button class="btn-icon" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="assets/Fabio_Fila_CV.pdf" download class="btn btn--primary btn--sm" data-i18n="nav.download">Baixar CV</a>
+        <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal" data-i18n="hero.eyebrow">👋 Olá, eu sou</p>
+        <h1 class="hero__title reveal">Fábio Fila</h1>
+        <h2 class="hero__role reveal">
+          <span data-i18n="hero.role">Desenvolvedor Back-End</span>
+          <span class="hero__role-sep">/</span>
+          <span class="hero__rotator" id="rotator">Full Stack</span>
+        </h2>
+        <p class="hero__lead reveal" data-i18n="hero.lead">
+          Mais de 25 anos construindo sistemas escaláveis, APIs e integrações
+          (REST, OAuth, ERPs), e-commerce e soluções corporativas — do levantamento
+          de requisitos à entrega. Foco em qualidade e desenvolvimento potencializado por IA.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#contato" class="btn btn--primary" data-i18n="hero.ctaContact">Entrar em contato</a>
+          <a href="#experiencia" class="btn btn--ghost" data-i18n="hero.ctaWork">Ver experiência</a>
+        </div>
+
+        <div class="hero__social reveal">
+          <a href="https://github.com/filati" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.12-.31-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.18.77.84 1.24 1.92 1.24 3.23 0 4.62-2.8 5.64-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/fabio-f-2588968/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+        </div>
+
+        <ul class="hero__stats reveal" aria-label="Indicadores">
+          <li><strong data-count="25">0</strong><span data-i18n="hero.stat1">anos de experiência</span></li>
+          <li><strong data-count="15">0</strong><span data-i18n="hero.stat2">grandes marcas</span></li>
+          <li><strong data-count="5">0</strong><span data-i18n="hero.stat3">frameworks PHP</span></li>
+          <li><strong data-count="100" data-suffix="%">0</strong><span data-i18n="hero.stat4">foco em entrega</span></li>
+        </ul>
+      </div>
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num">01</span>
+          <h2 class="section__title" data-i18n="about.title">Sobre mim</h2>
+        </header>
+        <div class="about">
+          <div class="about__text reveal">
+            <p data-i18n="about.p1">
+              Sou <strong>Desenvolvedor Full Stack</strong> com mais de 25 anos de experiência em
+              desenvolvimento web, atuando no ciclo completo de projetos: do levantamento de
+              requisitos à entrega e manutenção.
+            </p>
+            <p data-i18n="about.p2">
+              Tenho experiência sólida em sistemas escaláveis, integrações com APIs, e-commerce,
+              sistemas corporativos e soluções customizadas. Atuo bem tanto em equipe quanto de
+              forma independente, sempre com foco em entrega e qualidade.
+            </p>
+            <p data-i18n="about.p3">
+              Mais recentemente, incorporei <strong>IA generativa (Claude Code)</strong> ao meu
+              fluxo de trabalho para acelerar desenvolvimento, refatorar código legado e
+              depurar com mais eficiência — entregando mais, com mais consistência.
+            </p>
+            <div class="about__meta">
+              <div><span data-i18n="about.location">Localização</span><strong>Cotia – SP, Brasil</strong></div>
+              <div><span data-i18n="about.objective">Objetivo</span><strong data-i18n="about.objectiveVal">Desenvolvedor Back-End</strong></div>
+              <div><span data-i18n="about.langs">Idiomas</span><strong data-i18n="about.langsVal">Português / Inglês avançado</strong></div>
+            </div>
+          </div>
+          <aside class="about__card reveal">
+            <div class="terminal">
+              <div class="terminal__bar"><i></i><i></i><i></i><span>~/fabio-fila</span></div>
+              <pre class="terminal__body"><code><span class="t-c">$</span> whoami
+<span class="t-g">fabio_fila</span>
+<span class="t-c">$</span> cat perfil.json
+{
+  <span class="t-k">"foco"</span>: <span class="t-s">"Back-End / Full Stack"</span>,
+  <span class="t-k">"experiencia"</span>: <span class="t-s">"25+ anos"</span>,
+  <span class="t-k">"stack"</span>: [<span class="t-s">"PHP"</span>, <span class="t-s">"Laravel"</span>, <span class="t-s">"Symfony"</span>],
+  <span class="t-k">"ia"</span>: <span class="t-s">"Claude Code"</span>,
+  <span class="t-k">"disponivel"</span>: <span class="t-b">true</span>
+}
+<span class="t-c">$</span> <span class="cursor">█</span></code></pre>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num">02</span>
+          <h2 class="section__title" data-i18n="skills.title">Competências</h2>
+        </header>
+        <div class="skills">
+          <article class="skill-card reveal">
+            <h3>⚙️ <span data-i18n="skills.backend">Back-end</span></h3>
+            <ul class="tags">
+              <li>PHP (OOP)</li><li>Laravel</li><li>Symfony</li><li>Zend Expressive</li>
+              <li>CodeIgniter</li><li>CakePHP</li><li>Node.js</li><li>Python</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3>🎨 <span data-i18n="skills.frontend">Front-end</span></h3>
+            <ul class="tags">
+              <li>JavaScript</li><li>Vue.js</li><li>jQuery</li>
+              <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3>🗄️ <span data-i18n="skills.db">Bancos de Dados & Cache</span></h3>
+            <ul class="tags">
+              <li>MySQL</li><li>PostgreSQL</li><li>SQL Server (T-SQL)</li><li>MongoDB</li><li>Redis</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3>☁️ <span data-i18n="skills.devops">DevOps & Cloud</span></h3>
+            <ul class="tags">
+              <li>Docker</li><li>AWS</li><li>Linux</li><li>Nginx</li><li>Apache</li><li>Git</li><li>Scrum</li>
+            </ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3>🔌 <span data-i18n="skills.integ">Integrações</span></h3>
+            <ul class="tags">
+              <li data-i18n="skills.integTag1">APIs REST</li><li>OAuth</li><li>Webhooks</li>
+              <li>Bling</li><li>SAP</li><li>Adobe</li><li data-i18n="skills.integTag2">Gateways de pagamento</li>
+            </ul>
+          </article>
+          <article class="skill-card skill-card--ai reveal">
+            <h3>🤖 <span data-i18n="skills.ai">IA no Desenvolvimento</span></h3>
+            <ul class="tags">
+              <li>Claude Code</li><li data-i18n="skills.aiTag1">Refatoração</li>
+              <li>Debugging</li><li data-i18n="skills.aiTag2">Testes</li>
+              <li data-i18n="skills.aiTag3">Code Review</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIÊNCIA ============ -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num">03</span>
+          <h2 class="section__title" data-i18n="exp.title">Experiência</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Jul/2019 – <strong data-i18n="exp.now">Atual</strong></span>
+              <h3>Hands On</h3>
+              <p class="timeline__role" data-i18n="exp.r1">Analista Desenvolvedor Sênior</p>
+              <ul>
+                <li data-i18n="exp.r1a">Desenvolvimento e manutenção da plataforma <strong>idplugger</strong> de promoções e sorteios — arquitetura multi-cliente (CakePHP, API em Laravel, Redis e Python) atendendo de pequenas empresas a grandes marcas como Bunge Alimentos, Óticas Carol e SERASA.</li>
+                <li data-i18n="exp.r1b">Desenvolvimento de sistemas e integrações de API (REST/OAuth) para clientes como Pearson (Wizard), Bunge e Anfarmag.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Ago/2018 – Jul/2019</span>
+              <h3>Vector</h3>
+              <p class="timeline__role" data-i18n="exp.r2">Analista Desenvolvedor Sênior</p>
+              <ul>
+                <li data-i18n="exp.r2a">Projetos para Total Express, Abril e Santander.</li>
+                <li data-i18n="exp.r2b">Atuação em fábrica de software.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Jun/2016 – Ago/2018</span>
+              <h3>Primecomm</h3>
+              <p class="timeline__role" data-i18n="exp.r3">Gerente de TI / Desenvolvedor Sênior</p>
+              <ul>
+                <li data-i18n="exp.r3a">Gestão técnica e desenvolvimento.</li>
+                <li data-i18n="exp.r3b">Projetos para Atento, Avon e RRD.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Dez/2012 – Out/2015</span>
+              <h3>IPDV Online</h3>
+              <p class="timeline__role" data-i18n="exp.r4">Analista Programador PHP Sênior</p>
+              <ul>
+                <li data-i18n="exp.r4a">Sistemas de PDV para grandes marcas (Sanofi, Whirlpool, Yoki, Ajinomoto, Kellogg's).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Jul/2009 – Dez/2012</span>
+              <h3>Primecomm</h3>
+              <p class="timeline__role" data-i18n="exp.r5">Analista Desenvolvedor PHP</p>
+              <ul>
+                <li data-i18n="exp.r5a">Projetos para McDonald's e Telefônica/Vivo.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date" data-i18n="exp.since">Desde 1999</span>
+              <h3 data-i18n="exp.r6c">Outras empresas</h3>
+              <p class="timeline__role" data-i18n="exp.r6">Analista Desenvolvedor Web</p>
+              <ul>
+                <li data-i18n="exp.r6a">Desenvolvimento em PHP, ASP e ASP.NET.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="section section--alt" id="projetos">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num">04</span>
+          <h2 class="section__title" data-i18n="proj.title">Projetos relevantes</h2>
+        </header>
+        <div class="projects">
+          <article class="project project--featured reveal">
+            <div class="project__top">
+              <div class="project__icon">🎰</div>
+              <span class="project__badge" data-i18n="proj.live">● No ar</span>
+            </div>
+            <h3>idplugger — <span data-i18n="proj.idt">Promoções & Sorteios</span></h3>
+            <p data-i18n="proj.idd">Plataforma multi-cliente (multi-tenant) para campanhas, promoções e sorteios, atendendo de pequenas empresas a grandes marcas como Bunge Alimentos, Óticas Carol e SERASA.</p>
+            <ul class="tags tags--sm"><li>CakePHP</li><li>Laravel API</li><li>Redis</li><li>Python</li></ul>
+            <a class="project__link" href="https://idplugger.com.br/" target="_blank" rel="noopener">idplugger.com.br ↗</a>
+          </article>
+
+          <article class="project project--featured reveal">
+            <div class="project__top">
+              <div class="project__icon">🏀</div>
+              <span class="project__badge" data-i18n="proj.live">● No ar</span>
+            </div>
+            <h3>EpicSport — <span data-i18n="proj.ept">Plataforma B2B</span></h3>
+            <p data-i18n="proj.epd">Plataforma de vendas B2B desenvolvida com Vue.js e Laravel, com integração ao ERP Bling para sincronização de produtos, estoque e pedidos.</p>
+            <ul class="tags tags--sm"><li>Vue.js</li><li>Laravel</li><li>Bling</li><li>B2B</li></ul>
+            <a class="project__link" href="https://epicsport.com.br/" target="_blank" rel="noopener">epicsport.com.br ↗</a>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__icon">📦</div>
+            <h3>Total Express — <span data-i18n="proj.p1t">Sistema Logístico</span></h3>
+            <p data-i18n="proj.p1d">Sistema interno de controle de encomendas, em desenvolvimento contínuo desde 2018, com refatoração em Zend Expressive.</p>
+            <ul class="tags tags--sm"><li>Zend Expressive</li><li>PHP</li><li data-i18n="proj.logistics">Logística</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__icon">📱</div>
+            <h3>Sanofi No Ponto <span data-i18n="proj.webmobile">(Web e Mobile)</span></h3>
+            <p data-i18n="proj.p2d">Gestão de PDV e pesquisas offline, com integração ao SAP e suporte a dispositivos móveis com captura de imagens.</p>
+            <ul class="tags tags--sm"><li>SAP</li><li>Mobile</li><li>Offline</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__icon">🛒</div>
+            <h3 data-i18n="proj.p3t">Clubes de Desconto (E-commerce)</h3>
+            <p data-i18n="proj.p3d">Plataforma de e-commerce desenvolvida do zero, com integrações de pagamento (MOIP) e marketplace (Via Varejo).</p>
+            <ul class="tags tags--sm"><li>CodeIgniter</li><li>Node.js</li><li>MySQL</li></ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__icon">🏢</div>
+            <h3>Portal Atento <span>(Atentomundi)</span></h3>
+            <p data-i18n="proj.p4d">Portal corporativo de funcionários, construído com Symfony e MySQL.</p>
+            <ul class="tags tags--sm"><li>Symfony</li><li>MySQL</li><li data-i18n="proj.corporate">Corporativo</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IA / CLAUDE CODE ============ -->
+    <section class="section ai" id="ia">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num">05</span>
+          <h2 class="section__title" data-i18n="ai.title">Desenvolvimento potencializado por IA</h2>
+        </header>
+
+        <div class="ai__intro reveal">
+          <p data-i18n="ai.lead">
+            Integro <strong>IA generativa agêntica</strong> ao meu dia a dia de desenvolvimento — com destaque para o
+            <strong>Claude Code</strong>, a CLI da Anthropic. Não como substituto da engenharia, mas como um
+            multiplicador de produtividade que aplico com critério técnico e revisão criteriosa.
+          </p>
+        </div>
+
+        <div class="ai__grid">
+          <article class="ai__card reveal">
+            <div class="ai__card-ico">🚀</div>
+            <h3 data-i18n="ai.c1t">Aceleração de entrega</h3>
+            <p data-i18n="ai.c1d">Prototipagem, scaffolding e implementação de features mais rápidas, mantendo o padrão do código existente.</p>
+          </article>
+          <article class="ai__card reveal">
+            <div class="ai__card-ico">♻️</div>
+            <h3 data-i18n="ai.c2t">Refatoração de legado</h3>
+            <p data-i18n="ai.c2d">Modernização de bases antigas com segurança, melhorando legibilidade, estrutura e manutenibilidade.</p>
+          </article>
+          <article class="ai__card reveal">
+            <div class="ai__card-ico">🐛</div>
+            <h3 data-i18n="ai.c3t">Debugging eficiente</h3>
+            <p data-i18n="ai.c3d">Investigação de bugs complexos, análise de stack traces e reprodução de cenários com mais agilidade.</p>
+          </article>
+          <article class="ai__card reveal">
+            <div class="ai__card-ico">🔍</div>
+            <h3 data-i18n="ai.c4t">Code review & testes</h3>
+            <p data-i18n="ai.c4d">Apoio na revisão de código, geração de testes e documentação, elevando a qualidade da entrega.</p>
+          </article>
+        </div>
+
+        <p class="ai__note reveal" data-i18n="ai.note">
+          💡 Acredito que o desenvolvedor moderno se diferencia não só pelo domínio técnico,
+          mas por saber orquestrar IA com responsabilidade — validando, testando e mantendo o controle da arquitetura.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTES ============ -->
+    <section class="section section--alt" id="clientes">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num">06</span>
+          <h2 class="section__title" data-i18n="clients.title">Clientes atendidos</h2>
+        </header>
+        <p class="clients__sub reveal" data-i18n="clients.sub">Marcas que confiaram em sistemas que ajudei a construir:</p>
+        <ul class="clients reveal">
+          <li class="client"><img src="assets/logos/sanofi.svg" alt="Sanofi" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/mcdonalds.svg" alt="McDonald's" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/serasa.png" alt="SERASA" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/bunge.svg" alt="Bunge Alimentos" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/santander.svg" alt="Santander" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/vivo.svg" alt="Vivo" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/oticascarol.svg" alt="Óticas Carol" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/whirlpool.svg" alt="Whirlpool" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/yoki.svg" alt="Yoki" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/ajinomoto.svg" alt="Ajinomoto" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/kelloggs.svg" alt="Kellogg's" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/atento.png" alt="Atento" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/avon.svg" alt="Avon" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/totalexpress.png" alt="Total Express" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/pearson.png" alt="Pearson" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/abril.jpg" alt="Abril" loading="lazy"></li>
+          <li class="client"><img src="assets/logos/anfarmag.png" alt="Anfarmag" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FORMAÇÃO + IDIOMAS ============ -->
+    <section class="section" id="formacao">
+      <div class="container two-col">
+        <div class="reveal">
+          <header class="section__head">
+            <span class="section__num">07</span>
+            <h2 class="section__title" data-i18n="edu.title">Formação</h2>
+          </header>
+          <div class="info-card">
+            <h3 data-i18n="edu.course">Ciência da Computação</h3>
+            <p>Centro Universitário Uninove</p>
+            <span class="info-card__tag" data-i18n="edu.year">Concluído em 2007</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <header class="section__head">
+            <span class="section__num">08</span>
+            <h2 class="section__title" data-i18n="lang.title">Idiomas</h2>
+          </header>
+          <div class="info-card">
+            <div class="lang-row">
+              <span>🇧🇷 <span data-i18n="lang.pt">Português</span></span>
+              <span class="lang-level" data-i18n="lang.native">Nativo</span>
+            </div>
+            <div class="lang-row">
+              <span>🇺🇸 <span data-i18n="lang.en">Inglês</span></span>
+              <span class="lang-level" data-i18n="lang.advanced">Avançado (leitura e conversação)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contact" id="contato">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num">09</span>
+          <h2 class="section__title" data-i18n="contact.title">Vamos conversar?</h2>
+        </header>
+        <p class="contact__lead reveal" data-i18n="contact.lead">
+          Aberto a oportunidades e projetos. Entre em contato pelo canal que preferir.
+        </p>
+        <div class="contact__grid reveal">
+          <a class="contact__item" href="mailto:contato@fabiofila.com.br">
+            <span class="contact__ico">📧</span>
+            <span class="contact__label">E-mail</span>
+            <span class="contact__val">contato@fabiofila.com.br</span>
+          </a>
+          <a class="contact__item" href="https://wa.me/5511973588835" target="_blank" rel="noopener">
+            <span class="contact__ico">📱</span>
+            <span class="contact__label" data-i18n="contact.phone">Telefone / WhatsApp</span>
+            <span class="contact__val">(11) 97358-8835</span>
+          </a>
+          <a class="contact__item" href="https://github.com/filati" target="_blank" rel="noopener">
+            <span class="contact__ico">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.12-.31-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.18.77.84 1.24 1.92 1.24 3.23 0 4.62-2.8 5.64-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+            </span>
+            <span class="contact__label">GitHub</span>
+            <span class="contact__val">github.com/filati</span>
+          </a>
+          <a class="contact__item" href="https://www.linkedin.com/in/fabio-f-2588968/" target="_blank" rel="noopener">
+            <span class="contact__ico">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </span>
+            <span class="contact__label">LinkedIn</span>
+            <span class="contact__val">in/fabio-f</span>
+          </a>
+          <div class="contact__item contact__item--static">
+            <span class="contact__ico">📍</span>
+            <span class="contact__label" data-i18n="contact.location">Localização</span>
+            <span class="contact__val">Cotia – SP, Brasil</span>
+          </div>
+        </div>
+        <a href="assets/Fabio_Fila_CV.pdf" download class="btn btn--primary btn--lg contact__dl" data-i18n="contact.download">⬇ Baixar currículo (PDF)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Fábio Fila</span>
+      <span class="footer__made" data-i18n="footer.made">Feito com HTML, CSS, JS — e um toque de Claude Code 🤖</span>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

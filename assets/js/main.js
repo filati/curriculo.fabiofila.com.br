@@ -7,12 +7,6 @@
   /* ---------- Ano no rodapé ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  /* ---------- Foto sob demanda (via parâmetro na URL: ?foto) ---------- */
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.has("foto") || urlParams.has("photo")) {
-    document.body.classList.add("show-photo");
-  }
-
   /* ---------- Tema claro/escuro ---------- */
   const themeToggle = document.getElementById("themeToggle");
   const root = document.documentElement;

@@ -132,6 +132,9 @@ ul { list-style: none; }
   background-size: 46px 46px; opacity: .25; mask-image: radial-gradient(70% 60% at 50% 40%, #000, transparent 80%);
   -webkit-mask-image: radial-gradient(70% 60% at 50% 40%, #000, transparent 80%); }
 .hero__inner { position: relative; z-index: 1; max-width: 800px; }
+.hero__photo { display: none; width: 150px; height: 150px; object-fit: cover; object-position: center 20%;
+  border-radius: 22px; border: 3px solid var(--border); box-shadow: var(--shadow-sm); margin-bottom: 26px; }
+body.show-photo .hero__photo { display: block; }
 .hero__eyebrow { color: var(--primary); font-weight: 600; font-size: 1.05rem; margin-bottom: 14px; }
 .hero__title { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.05; font-weight: 800; letter-spacing: -.02em; }
 .hero__role { font-size: clamp(1.3rem, 3.5vw, 2rem); font-weight: 700; margin: 12px 0 22px;

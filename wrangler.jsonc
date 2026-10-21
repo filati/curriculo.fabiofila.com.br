@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "curriculo",
+  "compatibility_date": "2025-09-01",
+  // Site estático: serve a raiz do repositório (exclusões em .assetsignore)
+  "assets": {
+    "directory": "."
+  }
+}

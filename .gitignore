@@ -11,6 +11,7 @@
 node_modules/
 dist/
 .cache/
+.wrangler/
 
 # SO / editor
 .DS_Store

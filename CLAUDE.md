@@ -15,6 +15,10 @@ Files that matter:
   `google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=assets/Fabio_Fila_CV.pdf "file://$PWD/pdf/cv.html"`
 - Download links carry a `data-cv` attribute; `applyLang` in `main.js` points them at the PT or EN PDF.
 
+## Deploy
+
+Pushing to `main` auto-deploys via Cloudflare Workers Builds (Worker `curriculo`, deploy command `npx wrangler deploy`). `wrangler.jsonc` serves the repo root as static assets; `.assetsignore` keeps repo-only files (`.git`, docs, `pdf/` sources, wrangler config) from being published — add new non-public files there. The Worker `name` must stay `curriculo` to match the dashboard project. Check locally with `npx wrangler dev` (or `npx wrangler deploy --dry-run`).
+
 ## Bilingual content (PT/EN) — the key thing to know
 
 Portuguese is the source language and lives **directly in `index.html`**. English lives **only in the `I18N.en` dictionary in `assets/js/main.js`**. Elements are linked by a `data-i18n="section.key"` attribute:

@@ -78,6 +78,8 @@ pdf/                # fontes dos CVs em PDF (PT e EN)
 
 Para visualizar localmente, basta abrir o `index.html` no navegador.
 
+**Deploy:** automático no Cloudflare Workers (projeto `curriculo`) a cada push na `main`, via `npx wrangler deploy` com a config em `wrangler.jsonc`. Arquivos que não devem ser publicados ficam em `.assetsignore`.
+
 Para regerar os PDFs após editar `pdf/cv.html` / `pdf/cv-en.html`:
 
 ```bash

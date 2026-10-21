@@ -6,7 +6,7 @@
   <title>Fábio Fila — Currículo</title>
   <meta name="author" content="Fábio Alexandre de Fila" />
   <style>
-    @page { size: A4; margin: 16mm 16mm 14mm; }
+    @page { size: A4; margin: 13mm 15mm 12mm; }
     * { box-sizing: border-box; }
     body {
       margin: 0; color: #1f2937; font: 10pt/1.45 "Noto Sans", "Open Sans", Arial, sans-serif;
@@ -20,7 +20,7 @@
     header { border-bottom: 2px solid #4f46e5; padding-bottom: 10px; margin-bottom: 4px; }
 
     h2 {
-      margin: 14px 0 6px; font-size: 10.5pt; text-transform: uppercase; letter-spacing: .08em;
+      margin: 12px 0 5px; font-size: 10.5pt; text-transform: uppercase; letter-spacing: .08em;
       color: #4f46e5; border-bottom: 1px solid #e5e7eb; padding-bottom: 3px;
       break-after: avoid;
     }
@@ -30,7 +30,7 @@
 
     .skills { list-style: none; padding: 0; }
 
-    .job, .proj { margin-bottom: 8px; break-inside: avoid; }
+    .job, .proj { margin-bottom: 6px; break-inside: avoid; }
     .job__head { display: flex; justify-content: space-between; align-items: baseline; }
     .job__head h3, .proj h3 { margin: 0; font-size: 10.5pt; color: #111827; }
     .job__date { font-size: 9pt; color: #6b7280; white-space: nowrap; }
@@ -44,7 +44,7 @@
 <body>
   <header>
     <h1>Fábio Alexandre de Fila</h1>
-    <p class="role">Desenvolvedor Back-End / Full Stack</p>
+    <p class="role">Desenvolvedor Back-End</p>
     <p class="contact">
       <span>contato@fabiofila.com.br</span>
       <span>(11) 97358-8835</span>
@@ -59,8 +59,8 @@
 
   <h2>Resumo profissional</h2>
   <p>
-    Desenvolvedor Full Stack com mais de 25 anos de experiência em desenvolvimento web, atuando no
-    ciclo completo de projetos: do levantamento de requisitos à entrega e manutenção.
+    Desenvolvedor Back-End com mais de 25 anos de experiência em desenvolvimento web e vivência full stack,
+    atuando no ciclo completo de projetos: do levantamento de requisitos à entrega e manutenção.
   </p>
   <p>
     Experiência sólida em sistemas escaláveis, integrações com APIs (REST, OAuth, ERPs), e-commerce,
@@ -74,13 +74,13 @@
 
   <h2>Competências</h2>
   <ul class="skills">
-    <li><strong>Back-end:</strong> PHP (OOP), Laravel, Symfony, Zend Expressive, CodeIgniter, CakePHP, Node.js, Python</li>
-    <li><strong>Front-end &amp; UX:</strong> JavaScript, Vue.js, jQuery, HTML5, CSS3, Bootstrap, UX, Acessibilidade</li>
+    <li><strong>Back-end:</strong> PHP 8 (OOP), Laravel, Symfony, Zend Expressive, CodeIgniter, CakePHP, Node.js, Python, filas e jobs assíncronos, RabbitMQ</li>
+    <li><strong>Front-end &amp; UX:</strong> JavaScript, TypeScript, Vue.js, jQuery, HTML5, CSS3, Bootstrap, UX, Acessibilidade</li>
     <li><strong>Bancos de dados &amp; Cache:</strong> MySQL, PostgreSQL, SQL Server (T-SQL), MongoDB, Redis</li>
-    <li><strong>DevOps &amp; Cloud:</strong> Docker, AWS, Linux, Nginx, Apache, Git, Scrum</li>
+    <li><strong>DevOps &amp; Cloud:</strong> Docker, AWS, Cloudflare, CI/CD (GitHub Actions), Linux, Nginx, Apache, Git, Scrum</li>
     <li><strong>Integrações:</strong> APIs REST, OAuth, Webhooks, Bling, SAP, Adobe, Gateways de pagamento</li>
     <li><strong>IA no desenvolvimento:</strong> Claude Code — refatoração, debugging, testes, code review</li>
-    <li><strong>Privacidade:</strong> Desenvolvimento seguindo as orientações da LGPD</li>
+    <li><strong>Qualidade &amp; Segurança:</strong> testes automatizados (PHPUnit, Pest), OWASP, desenvolvimento seguindo as orientações da LGPD</li>
   </ul>
 
   <h2>Experiência profissional</h2>
@@ -91,6 +91,10 @@
       <li>Desenvolvimento e manutenção da plataforma idplugger de promoções e sorteios — arquitetura
         multi-cliente (CakePHP, API em Laravel, Redis e Python) atendendo de pequenas empresas a grandes
         marcas como Bunge Alimentos, Óticas Carol e SERASA.</li>
+      <li>Definição de arquitetura e decisões técnicas da plataforma: modelagem de dados multi-cliente, API em Laravel e serviços em Python.</li>
+      <li>Performance e escala: cache com Redis, filas para processamento assíncrono e otimização de queries para suportar picos de acesso durante campanhas.</li>
+      <li>Infraestrutura e deploy com Docker, servidores Linux/Nginx e AWS, com pipelines de CI/CD.</li>
+      <li>Code review e orientação técnica de outros desenvolvedores.</li>
       <li>Desenvolvimento de sistemas e integrações de API (REST/OAuth) para clientes como Pearson (Wizard), Bunge e Anfarmag.</li>
     </ul>
   </div>
@@ -108,6 +112,13 @@
     <ul>
       <li>Gestão técnica e desenvolvimento.</li>
       <li>Projetos para Atento, Avon e RRD.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job__head"><h3>Autônomo</h3><span class="job__date">Out/2015 – Jun/2016</span></div>
+    <div class="job__role">Desenvolvedor Freelancer</div>
+    <ul>
+      <li>Projetos pontuais em PHP para clientes diversos.</li>
     </ul>
   </div>
   <div class="job">

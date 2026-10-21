@@ -132,7 +132,9 @@
     }, 250);
   };
   rotator.style.transition = "opacity .25s ease";
-  setInterval(tickRotator, 2600);
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    setInterval(tickRotator, 2600);
+  }
 
   /* ====================================================
      i18n  —  PT / EN
@@ -143,7 +145,7 @@
       "nav.projects": "Projects", "nav.ai": "AI", "nav.contact": "Contact",
       "nav.download": "Download CV",
 
-      "hero.eyebrow": "👋 Hi, I'm",
+      "hero.eyebrow": "<span aria-hidden=\"true\">👋</span> Hi, I'm",
       "hero.role": "Back-End Developer",
       "hero.lead": "Over 25 years building scalable systems, APIs and integrations (REST, OAuth, ERPs), e-commerce and corporate solutions — from requirements to delivery. Focused on quality and AI-powered development.",
       "hero.ctaContact": "Get in touch", "hero.ctaWork": "See experience",
@@ -151,7 +153,7 @@
       "hero.stat3": "PHP frameworks", "hero.stat4": "delivery focused",
 
       "about.title": "About me",
-      "about.p1": "I'm a <strong>Full Stack Developer</strong> with over 25 years of experience in web development, covering the full project cycle: from requirements gathering to delivery and maintenance.",
+      "about.p1": "I'm a <strong>Back-End Developer</strong> with over 25 years of experience in web development and a full stack background, covering the full project cycle: from requirements gathering to delivery and maintenance.",
       "about.p2": "I have solid experience with scalable systems, API integrations, e-commerce, corporate systems and custom solutions. I work well both in teams and independently, always focused on delivery, quality, accessibility and compliance with the LGPD (Brazilian data protection law).",
       "about.p3": "More recently, I added <strong>generative AI (Claude Code)</strong> to my workflow to speed up development, refactor legacy code and debug more efficiently — delivering more, with more consistency.",
       "about.location": "Location", "about.objective": "Objective",
@@ -160,24 +162,31 @@
 
       "skills.title": "Skills", "skills.backend": "Back-end", "skills.frontend": "Front-end & UX", "skills.feTag1": "Accessibility",
       "skills.db": "Databases & Cache", "skills.devops": "DevOps & Cloud", "skills.ai": "AI in Development",
-      "skills.integ": "Integrations", "skills.integTag1": "REST APIs", "skills.integTag2": "Payment gateways",
+      "skills.integ": "Integrations", "skills.beTag1": "Queues & Jobs",
+      "skills.quality": "Quality & Security", "skills.qTag1": "Automated testing", "skills.integTag1": "REST APIs", "skills.integTag2": "Payment gateways",
       "skills.aiTag1": "Refactoring", "skills.aiTag2": "Testing", "skills.aiTag3": "Code Review",
 
       "exp.title": "Experience", "exp.now": "Present", "exp.since": "Since 1999",
-      "exp.r1": "Senior Developer Analyst",
+      "exp.r1": "Senior Software Developer",
       "exp.r1a": "Development and maintenance of the <strong>idplugger</strong> promotions & sweepstakes platform — a multi-tenant architecture (CakePHP, Laravel API, Redis and Python) serving everything from small businesses to major brands such as Bunge Alimentos, Óticas Carol and SERASA.",
+      "exp.r1c": "Defined the platform's architecture and technical decisions: multi-tenant data modeling, Laravel API and Python services.",
+      "exp.r1d": "Performance and scale: Redis caching, queues for asynchronous processing and query optimization to handle traffic peaks during campaigns.",
+      "exp.r1e": "Infrastructure and deployment with Docker, Linux/Nginx servers and AWS, with CI/CD pipelines.",
+      "exp.r1f": "Code review and technical mentoring of other developers.",
       "exp.r1b": "Development of systems and API integrations (REST/OAuth) for clients such as Pearson (Wizard), Bunge and Anfarmag.",
-      "exp.r2": "Senior Developer Analyst",
+      "exp.r2": "Senior Software Developer",
       "exp.r2a": "Projects for Total Express, Abril and Santander.",
       "exp.r2b": "Worked at a software factory.",
       "exp.r3": "IT Manager / Senior Developer",
       "exp.r3a": "Technical management and development.",
       "exp.r3b": "Projects for Atento, Avon and RRD.",
-      "exp.r4": "Senior PHP Programmer Analyst",
+      "exp.r4": "Senior PHP Developer",
       "exp.r4a": "POS systems for major brands (Sanofi, Whirlpool, Yoki, Ajinomoto, Kellogg's).",
-      "exp.r5": "PHP Developer Analyst",
+      "exp.r5": "PHP Developer",
       "exp.r5a": "Projects for McDonald's and Telefônica/Vivo.",
-      "exp.r6": "Web Developer Analyst", "exp.r6c": "Other companies",
+      "exp.r6": "Web Developer", "exp.r6c": "Other companies",
+      "exp.r7": "Freelance Developer", "exp.r7c": "Self-employed",
+      "exp.r7a": "Ad-hoc PHP projects for various clients.",
       "exp.r6a": "Development in PHP, ASP and ASP.NET.",
 
       "proj.title": "Featured projects", "proj.live": "● Live",
@@ -199,7 +208,7 @@
       "ai.c2t": "Legacy refactoring", "ai.c2d": "Safely modernizing old codebases, improving readability, structure and maintainability.",
       "ai.c3t": "Efficient debugging", "ai.c3d": "Investigating complex bugs, analyzing stack traces and reproducing scenarios faster.",
       "ai.c4t": "Code review & tests", "ai.c4d": "Support for code review, test generation and documentation, raising delivery quality.",
-      "ai.note": "💡 I believe the modern developer stands out not only for technical mastery, but for orchestrating AI responsibly — validating, testing and keeping control of the architecture.",
+      "ai.note": "<span aria-hidden=\"true\">💡</span> I believe the modern developer stands out not only for technical mastery, but for orchestrating AI responsibly — validating, testing and keeping control of the architecture.",
 
       "clients.title": "Clients served", "clients.sub": "Brands that trusted systems I helped build:",
 
@@ -210,8 +219,11 @@
       "contact.title": "Let's talk?",
       "contact.lead": "Open to opportunities and projects. Reach out through your preferred channel.",
       "contact.phone": "Phone / WhatsApp", "contact.location": "Location",
-      "contact.download": "⬇ Download résumé (PDF)",
-      "footer.made": "Built with HTML, CSS, JS — and a touch of Claude Code 🤖"
+      "contact.download": "<span aria-hidden=\"true\">⬇</span> Download résumé (PDF)",
+      "a11y.skip": "Skip to content", "a11y.nav": "Main navigation",
+      "a11y.theme": "Toggle light/dark theme", "a11y.stats": "Highlights",
+      "a11y.scroll": "Scroll down", "a11y.top": "Back to top",
+      "footer.made": "Built with HTML, CSS, JS — and a touch of Claude Code <span aria-hidden=\"true\">🤖</span>"
     }
   };
 
@@ -221,6 +233,10 @@
   const ptStore = new Map();
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     ptStore.set(el, el.innerHTML);
+  });
+  const ptAriaStore = new Map();
+  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+    ptAriaStore.set(el, el.getAttribute("aria-label"));
   });
 
   const applyLang = (lang) => {
@@ -232,8 +248,17 @@
         el.innerHTML = ptStore.get(el);
       }
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      el.setAttribute("aria-label", lang === "en" && I18N.en[key] != null ? I18N.en[key] : ptAriaStore.get(el));
+    });
     document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
-    document.getElementById("langLabel").textContent = lang === "en" ? "PT" : "EN";
+    // O botão mostra o idioma de destino; o texto oculto completa o nome acessível
+    const langLabel = document.getElementById("langLabel");
+    const langHint = document.getElementById("langHint");
+    langLabel.textContent = lang === "en" ? "PT" : "EN";
+    langHint.textContent = lang === "en" ? " — Mudar para português" : " — Switch to English";
+    langLabel.lang = langHint.lang = lang === "en" ? "pt-BR" : "en";
     document.querySelectorAll("[data-cv]").forEach((a) => {
       a.href = lang === "en" ? "assets/Fabio_Fila_CV_EN.pdf" : "assets/Fabio_Fila_CV.pdf";
     });

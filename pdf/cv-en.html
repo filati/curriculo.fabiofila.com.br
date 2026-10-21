@@ -6,7 +6,7 @@
   <title>Fábio Fila — Résumé</title>
   <meta name="author" content="Fábio Alexandre de Fila" />
   <style>
-    @page { size: A4; margin: 16mm 16mm 14mm; }
+    @page { size: A4; margin: 13mm 15mm 12mm; }
     * { box-sizing: border-box; }
     body {
       margin: 0; color: #1f2937; font: 10pt/1.45 "Noto Sans", "Open Sans", Arial, sans-serif;
@@ -20,7 +20,7 @@
     header { border-bottom: 2px solid #4f46e5; padding-bottom: 10px; margin-bottom: 4px; }
 
     h2 {
-      margin: 14px 0 6px; font-size: 10.5pt; text-transform: uppercase; letter-spacing: .08em;
+      margin: 12px 0 5px; font-size: 10.5pt; text-transform: uppercase; letter-spacing: .08em;
       color: #4f46e5; border-bottom: 1px solid #e5e7eb; padding-bottom: 3px;
       break-after: avoid;
     }
@@ -30,7 +30,7 @@
 
     .skills { list-style: none; padding: 0; }
 
-    .job, .proj { margin-bottom: 8px; break-inside: avoid; }
+    .job, .proj { margin-bottom: 6px; break-inside: avoid; }
     .job__head { display: flex; justify-content: space-between; align-items: baseline; }
     .job__head h3, .proj h3 { margin: 0; font-size: 10.5pt; color: #111827; }
     .job__date { font-size: 9pt; color: #6b7280; white-space: nowrap; }
@@ -44,7 +44,7 @@
 <body>
   <header>
     <h1>Fábio Alexandre de Fila</h1>
-    <p class="role">Back-End / Full Stack Developer</p>
+    <p class="role">Back-End Developer</p>
     <p class="contact">
       <span>contato@fabiofila.com.br</span>
       <span>+55 11 97358-8835</span>
@@ -59,8 +59,8 @@
 
   <h2>Professional summary</h2>
   <p>
-    Full Stack Developer with over 25 years of experience in web development, covering the full
-    project cycle: from requirements gathering to delivery and maintenance.
+    Back-End Developer with over 25 years of experience in web development and a full stack background,
+    covering the full project cycle: from requirements gathering to delivery and maintenance.
   </p>
   <p>
     Solid experience with scalable systems, API integrations (REST, OAuth, ERPs), e-commerce,
@@ -74,29 +74,33 @@
 
   <h2>Skills</h2>
   <ul class="skills">
-    <li><strong>Back-end:</strong> PHP (OOP), Laravel, Symfony, Zend Expressive, CodeIgniter, CakePHP, Node.js, Python</li>
-    <li><strong>Front-end &amp; UX:</strong> JavaScript, Vue.js, jQuery, HTML5, CSS3, Bootstrap, UX, Accessibility</li>
+    <li><strong>Back-end:</strong> PHP 8 (OOP), Laravel, Symfony, Zend Expressive, CodeIgniter, CakePHP, Node.js, Python, queues and async jobs, RabbitMQ</li>
+    <li><strong>Front-end &amp; UX:</strong> JavaScript, TypeScript, Vue.js, jQuery, HTML5, CSS3, Bootstrap, UX, Accessibility</li>
     <li><strong>Databases &amp; Cache:</strong> MySQL, PostgreSQL, SQL Server (T-SQL), MongoDB, Redis</li>
-    <li><strong>DevOps &amp; Cloud:</strong> Docker, AWS, Linux, Nginx, Apache, Git, Scrum</li>
+    <li><strong>DevOps &amp; Cloud:</strong> Docker, AWS, Cloudflare, CI/CD (GitHub Actions), Linux, Nginx, Apache, Git, Scrum</li>
     <li><strong>Integrations:</strong> REST APIs, OAuth, Webhooks, Bling, SAP, Adobe, Payment gateways</li>
     <li><strong>AI in development:</strong> Claude Code — refactoring, debugging, testing, code review</li>
-    <li><strong>Privacy:</strong> Development following LGPD (Brazilian data protection law) guidelines</li>
+    <li><strong>Quality &amp; Security:</strong> automated testing (PHPUnit, Pest), OWASP, development following LGPD (Brazilian data protection law) guidelines</li>
   </ul>
 
   <h2>Professional experience</h2>
   <div class="job">
     <div class="job__head"><h3>Hands On</h3><span class="job__date">Jul/2019 – Present</span></div>
-    <div class="job__role">Senior Developer Analyst</div>
+    <div class="job__role">Senior Software Developer</div>
     <ul>
       <li>Development and maintenance of the idplugger promotions &amp; sweepstakes platform — a
         multi-tenant architecture (CakePHP, Laravel API, Redis and Python) serving everything from small
         businesses to major brands such as Bunge Alimentos, Óticas Carol and SERASA.</li>
+      <li>Defined the platform's architecture and technical decisions: multi-tenant data modeling, Laravel API and Python services.</li>
+      <li>Performance and scale: Redis caching, queues for asynchronous processing and query optimization to handle traffic peaks during campaigns.</li>
+      <li>Infrastructure and deployment with Docker, Linux/Nginx servers and AWS, with CI/CD pipelines.</li>
+      <li>Code review and technical mentoring of other developers.</li>
       <li>Development of systems and API integrations (REST/OAuth) for clients such as Pearson (Wizard), Bunge and Anfarmag.</li>
     </ul>
   </div>
   <div class="job">
     <div class="job__head"><h3>Vector</h3><span class="job__date">Aug/2018 – Jul/2019</span></div>
-    <div class="job__role">Senior Developer Analyst</div>
+    <div class="job__role">Senior Software Developer</div>
     <ul>
       <li>Projects for Total Express, Abril and Santander.</li>
       <li>Worked at a software factory.</li>
@@ -111,22 +115,29 @@
     </ul>
   </div>
   <div class="job">
+    <div class="job__head"><h3>Self-employed</h3><span class="job__date">Oct/2015 – Jun/2016</span></div>
+    <div class="job__role">Freelance Developer</div>
+    <ul>
+      <li>Ad-hoc PHP projects for various clients.</li>
+    </ul>
+  </div>
+  <div class="job">
     <div class="job__head"><h3>IPDV Online</h3><span class="job__date">Dec/2012 – Oct/2015</span></div>
-    <div class="job__role">Senior PHP Programmer Analyst</div>
+    <div class="job__role">Senior PHP Developer</div>
     <ul>
       <li>POS systems for major brands (Sanofi, Whirlpool, Yoki, Ajinomoto, Kellogg's).</li>
     </ul>
   </div>
   <div class="job">
     <div class="job__head"><h3>Primecomm</h3><span class="job__date">Jul/2009 – Dec/2012</span></div>
-    <div class="job__role">PHP Developer Analyst</div>
+    <div class="job__role">PHP Developer</div>
     <ul>
       <li>Projects for McDonald's and Telefônica/Vivo.</li>
     </ul>
   </div>
   <div class="job">
     <div class="job__head"><h3>Other companies</h3><span class="job__date">Since 1999</span></div>
-    <div class="job__role">Web Developer Analyst</div>
+    <div class="job__role">Web Developer</div>
     <ul>
       <li>Development in PHP, ASP and ASP.NET.</li>
     </ul>

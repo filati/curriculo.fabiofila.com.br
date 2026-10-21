@@ -10,7 +10,7 @@
 
 ## Sobre
 
-Desenvolvedor Full Stack com mais de 25 anos de experiência em desenvolvimento web, atuando no ciclo completo de projetos: do levantamento de requisitos à entrega e manutenção. Experiência sólida em sistemas escaláveis, integrações com APIs, e-commerce, sistemas corporativos e soluções customizadas, com atenção à acessibilidade e à conformidade com a LGPD.
+Desenvolvedor Back-End com mais de 25 anos de experiência em desenvolvimento web e vivência full stack, atuando no ciclo completo de projetos: do levantamento de requisitos à entrega e manutenção. Experiência sólida em sistemas escaláveis, integrações com APIs, e-commerce, sistemas corporativos e soluções customizadas, com atenção à acessibilidade e à conformidade com a LGPD.
 
 Recentemente incorporei **IA generativa (Claude Code)** ao fluxo de trabalho para acelerar desenvolvimento, refatorar código legado e depurar com mais eficiência — sempre com critério técnico e revisão criteriosa.
 
@@ -18,10 +18,11 @@ Recentemente incorporei **IA generativa (Claude Code)** ao fluxo de trabalho par
 
 | Área | Tecnologias |
 |---|---|
-| **Back-end** | PHP (OOP), Laravel, Symfony, Zend Expressive, CodeIgniter, CakePHP, Node.js, Python |
-| **Front-end & UX** | JavaScript, Vue.js, jQuery, HTML5, CSS3, Bootstrap, UX, Acessibilidade |
+| **Back-end** | PHP 8 (OOP), Laravel, Symfony, Zend Expressive, CodeIgniter, CakePHP, Node.js, Python, Filas & Jobs, RabbitMQ |
+| **Front-end & UX** | JavaScript, TypeScript, Vue.js, jQuery, HTML5, CSS3, Bootstrap, UX, Acessibilidade |
 | **Bancos & Cache** | MySQL, PostgreSQL, SQL Server (T-SQL), MongoDB, Redis |
-| **DevOps & Cloud** | Docker, AWS, Linux, Nginx, Apache, Git, Scrum |
+| **DevOps & Cloud** | Docker, AWS, Cloudflare, CI/CD (GitHub Actions), Linux, Nginx, Apache, Git, Scrum |
+| **Qualidade & Segurança** | PHPUnit, Pest, testes automatizados, OWASP, LGPD |
 | **Integrações** | APIs REST, OAuth, Webhooks, Bling, SAP, Adobe, Gateways de pagamento |
 | **IA no Dev** | Claude Code, refatoração, debugging, testes, code review |
 
@@ -32,6 +33,7 @@ Recentemente incorporei **IA generativa (Claude Code)** ao fluxo de trabalho par
 | Jul/2019 – Atual | **Hands On** | Analista Desenvolvedor Sênior |
 | Ago/2018 – Jul/2019 | **Vector** | Analista Desenvolvedor Sênior |
 | Jun/2016 – Ago/2018 | **Primecomm** | Gerente de TI / Desenvolvedor Sênior |
+| Out/2015 – Jun/2016 | **Autônomo** | Desenvolvedor Freelancer |
 | Dez/2012 – Out/2015 | **IPDV Online** | Analista Programador PHP Sênior |
 | Jul/2009 – Dez/2012 | **Primecomm** | Analista Desenvolvedor PHP |
 | Desde 1999 | Outras empresas | Analista Desenvolvedor Web |
@@ -73,7 +75,8 @@ assets/js/          # interações (tema, i18n PT/EN, animações)
 assets/logos/       # logos de clientes
 assets/Fabio_Fila_CV.pdf     # gerado a partir de pdf/cv.html
 assets/Fabio_Fila_CV_EN.pdf  # gerado a partir de pdf/cv-en.html
-pdf/                # fontes dos CVs em PDF (PT e EN)
+assets/og-image.png  # imagem de compartilhamento (og:image)
+pdf/                # fontes dos PDFs (PT e EN) e da og:image
 ```
 
 Para visualizar localmente, basta abrir o `index.html` no navegador.
@@ -85,6 +88,12 @@ Para regerar os PDFs após editar `pdf/cv.html` / `pdf/cv-en.html`:
 ```bash
 google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=assets/Fabio_Fila_CV.pdf "file://$PWD/pdf/cv.html"
 google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=assets/Fabio_Fila_CV_EN.pdf "file://$PWD/pdf/cv-en.html"
+```
+
+Para regerar a og:image após editar `pdf/og-image.html`:
+
+```bash
+google-chrome --headless=new --hide-scrollbars --window-size=1200,630 --screenshot=assets/og-image.png "file://$PWD/pdf/og-image.html"
 ```
 
 <sub>Feito com HTML, CSS, JS — e um toque de Claude Code 🤖</sub>

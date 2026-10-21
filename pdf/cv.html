@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Fonte do PDF do currículo (assets/Fabio_Fila_CV.pdf). Para regerar, veja o README. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fábio Fila — Currículo</title>
+  <meta name="author" content="Fábio Alexandre de Fila" />
+  <style>
+    @page { size: A4; margin: 16mm 16mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; color: #1f2937; font: 10pt/1.45 "Noto Sans", "Open Sans", Arial, sans-serif;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    a { color: inherit; text-decoration: none; }
+    h1 { margin: 0; font-size: 22pt; line-height: 1.1; color: #111827; }
+    .role { margin: 4px 0 8px; font-size: 12pt; font-weight: 600; color: #4f46e5; }
+    .contact { font-size: 9pt; color: #4b5563; }
+    .contact span + span::before { content: "·"; margin: 0 6px; color: #9ca3af; }
+    header { border-bottom: 2px solid #4f46e5; padding-bottom: 10px; margin-bottom: 4px; }
+
+    h2 {
+      margin: 14px 0 6px; font-size: 10.5pt; text-transform: uppercase; letter-spacing: .08em;
+      color: #4f46e5; border-bottom: 1px solid #e5e7eb; padding-bottom: 3px;
+      break-after: avoid;
+    }
+    p { margin: 0 0 5px; }
+    ul { margin: 2px 0 0; padding-left: 16px; }
+    li { margin-bottom: 2px; }
+
+    .skills { list-style: none; padding: 0; }
+
+    .job, .proj { margin-bottom: 8px; break-inside: avoid; }
+    .job__head { display: flex; justify-content: space-between; align-items: baseline; }
+    .job__head h3, .proj h3 { margin: 0; font-size: 10.5pt; color: #111827; }
+    .job__date { font-size: 9pt; color: #6b7280; white-space: nowrap; }
+    .job__role { font-style: italic; color: #4b5563; }
+    .stack { font-size: 9pt; color: #6b7280; }
+    .proj p .stack { display: block; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fábio Alexandre de Fila</h1>
+    <p class="role">Desenvolvedor Back-End / Full Stack</p>
+    <p class="contact">
+      <span>contato@fabiofila.com.br</span>
+      <span>(11) 97358-8835</span>
+      <span>Cotia – SP, Brasil</span>
+    </p>
+    <p class="contact">
+      <span><a href="https://curriculo.fabiofila.com.br">curriculo.fabiofila.com.br</a></span>
+      <span><a href="https://www.linkedin.com/in/fabio-f-2588968/">linkedin.com/in/fabio-f-2588968</a></span>
+      <span><a href="https://github.com/filati">github.com/filati</a></span>
+    </p>
+  </header>
+
+  <h2>Resumo profissional</h2>
+  <p>
+    Desenvolvedor Full Stack com mais de 25 anos de experiência em desenvolvimento web, atuando no
+    ciclo completo de projetos: do levantamento de requisitos à entrega e manutenção.
+  </p>
+  <p>
+    Experiência sólida em sistemas escaláveis, integrações com APIs (REST, OAuth, ERPs), e-commerce,
+    sistemas corporativos e soluções customizadas. Atuo bem tanto em equipe quanto de forma
+    independente, sempre com foco em entrega, qualidade, acessibilidade e conformidade com a LGPD.
+  </p>
+  <p>
+    Incorporei IA generativa (Claude Code) ao fluxo de trabalho para acelerar desenvolvimento,
+    refatorar código legado e depurar com mais eficiência — sempre com critério técnico e revisão criteriosa.
+  </p>
+
+  <h2>Competências</h2>
+  <ul class="skills">
+    <li><strong>Back-end:</strong> PHP (OOP), Laravel, Symfony, Zend Expressive, CodeIgniter, CakePHP, Node.js, Python</li>
+    <li><strong>Front-end &amp; UX:</strong> JavaScript, Vue.js, jQuery, HTML5, CSS3, Bootstrap, UX, Acessibilidade</li>
+    <li><strong>Bancos de dados &amp; Cache:</strong> MySQL, PostgreSQL, SQL Server (T-SQL), MongoDB, Redis</li>
+    <li><strong>DevOps &amp; Cloud:</strong> Docker, AWS, Linux, Nginx, Apache, Git, Scrum</li>
+    <li><strong>Integrações:</strong> APIs REST, OAuth, Webhooks, Bling, SAP, Adobe, Gateways de pagamento</li>
+    <li><strong>IA no desenvolvimento:</strong> Claude Code — refatoração, debugging, testes, code review</li>
+    <li><strong>Privacidade:</strong> Desenvolvimento seguindo as orientações da LGPD</li>
+  </ul>
+
+  <h2>Experiência profissional</h2>
+  <div class="job">
+    <div class="job__head"><h3>Hands On</h3><span class="job__date">Jul/2019 – Atual</span></div>
+    <div class="job__role">Analista Desenvolvedor Sênior</div>
+    <ul>
+      <li>Desenvolvimento e manutenção da plataforma idplugger de promoções e sorteios — arquitetura
+        multi-cliente (CakePHP, API em Laravel, Redis e Python) atendendo de pequenas empresas a grandes
+        marcas como Bunge Alimentos, Óticas Carol e SERASA.</li>
+      <li>Desenvolvimento de sistemas e integrações de API (REST/OAuth) para clientes como Pearson (Wizard), Bunge e Anfarmag.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job__head"><h3>Vector</h3><span class="job__date">Ago/2018 – Jul/2019</span></div>
+    <div class="job__role">Analista Desenvolvedor Sênior</div>
+    <ul>
+      <li>Projetos para Total Express, Abril e Santander.</li>
+      <li>Atuação em fábrica de software.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job__head"><h3>Primecomm</h3><span class="job__date">Jun/2016 – Ago/2018</span></div>
+    <div class="job__role">Gerente de TI / Desenvolvedor Sênior</div>
+    <ul>
+      <li>Gestão técnica e desenvolvimento.</li>
+      <li>Projetos para Atento, Avon e RRD.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job__head"><h3>IPDV Online</h3><span class="job__date">Dez/2012 – Out/2015</span></div>
+    <div class="job__role">Analista Programador PHP Sênior</div>
+    <ul>
+      <li>Sistemas de PDV para grandes marcas (Sanofi, Whirlpool, Yoki, Ajinomoto, Kellogg's).</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job__head"><h3>Primecomm</h3><span class="job__date">Jul/2009 – Dez/2012</span></div>
+    <div class="job__role">Analista Desenvolvedor PHP</div>
+    <ul>
+      <li>Projetos para McDonald's e Telefônica/Vivo.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job__head"><h3>Outras empresas</h3><span class="job__date">Desde 1999</span></div>
+    <div class="job__role">Analista Desenvolvedor Web</div>
+    <ul>
+      <li>Desenvolvimento em PHP, ASP e ASP.NET.</li>
+    </ul>
+  </div>
+
+  <h2>Projetos relevantes</h2>
+  <div class="proj">
+    <h3>idplugger — Promoções &amp; Sorteios <span class="stack">(idplugger.com.br)</span></h3>
+    <p>Plataforma multi-cliente (multi-tenant) para campanhas, promoções e sorteios, atendendo de pequenas
+      empresas a grandes marcas como Bunge Alimentos, Óticas Carol e SERASA.
+      <span class="stack">CakePHP · Laravel API · Redis · Python</span></p>
+  </div>
+  <div class="proj">
+    <h3>EpicSport — Plataforma B2B <span class="stack">(epicsport.com.br)</span></h3>
+    <p>Plataforma de vendas B2B com integração ao ERP Bling para sincronização de produtos, estoque e pedidos.
+      <span class="stack">Vue.js · Laravel · Bling</span></p>
+  </div>
+  <div class="proj">
+    <h3>Total Express — Sistema Logístico</h3>
+    <p>Sistema interno de controle de encomendas, em desenvolvimento contínuo desde 2018, com refatoração em Zend Expressive.
+      <span class="stack">Zend Expressive · PHP</span></p>
+  </div>
+  <div class="proj">
+    <h3>Sanofi No Ponto (Web e Mobile)</h3>
+    <p>Gestão de PDV e pesquisas offline, com integração ao SAP e suporte a dispositivos móveis com captura de imagens.
+      <span class="stack">SAP · Mobile · Offline</span></p>
+  </div>
+  <div class="proj">
+    <h3>Clubes de Desconto (E-commerce)</h3>
+    <p>Plataforma de e-commerce desenvolvida do zero, com integrações de pagamento (MOIP) e marketplace (Via Varejo).
+      <span class="stack">CodeIgniter · Node.js · MySQL</span></p>
+  </div>
+  <div class="proj">
+    <h3>Portal Atento (Atentomundi)</h3>
+    <p>Portal corporativo de funcionários. <span class="stack">Symfony · MySQL</span></p>
+  </div>
+
+  <h2>Clientes atendidos</h2>
+  <p>Sanofi, McDonald's, SERASA, Bunge, Santander, Vivo, Óticas Carol, Whirlpool, Yoki, Ajinomoto,
+    Kellogg's, Atento, Avon, Total Express, Pearson, Abril, Anfarmag.</p>
+
+  <div class="two-col">
+    <div>
+      <h2>Formação</h2>
+      <p><strong>Ciência da Computação</strong><br />Centro Universitário Uninove — concluído em 2007</p>
+    </div>
+    <div>
+      <h2>Idiomas</h2>
+      <p>Português — nativo<br />Inglês — avançado (leitura e conversação)</p>
+    </div>
+  </div>
+</body>
+</html>

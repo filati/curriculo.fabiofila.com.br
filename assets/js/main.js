@@ -152,13 +152,13 @@
 
       "about.title": "About me",
       "about.p1": "I'm a <strong>Full Stack Developer</strong> with over 25 years of experience in web development, covering the full project cycle: from requirements gathering to delivery and maintenance.",
-      "about.p2": "I have solid experience with scalable systems, API integrations, e-commerce, corporate systems and custom solutions. I work well both in teams and independently, always focused on delivery and quality.",
+      "about.p2": "I have solid experience with scalable systems, API integrations, e-commerce, corporate systems and custom solutions. I work well both in teams and independently, always focused on delivery, quality, accessibility and compliance with the LGPD (Brazilian data protection law).",
       "about.p3": "More recently, I added <strong>generative AI (Claude Code)</strong> to my workflow to speed up development, refactor legacy code and debug more efficiently — delivering more, with more consistency.",
       "about.location": "Location", "about.objective": "Objective",
       "about.objectiveVal": "Back-End Developer", "about.langs": "Languages",
       "about.langsVal": "Portuguese / Advanced English",
 
-      "skills.title": "Skills", "skills.backend": "Back-end", "skills.frontend": "Front-end",
+      "skills.title": "Skills", "skills.backend": "Back-end", "skills.frontend": "Front-end & UX", "skills.feTag1": "Accessibility",
       "skills.db": "Databases & Cache", "skills.devops": "DevOps & Cloud", "skills.ai": "AI in Development",
       "skills.integ": "Integrations", "skills.integTag1": "REST APIs", "skills.integTag2": "Payment gateways",
       "skills.aiTag1": "Refactoring", "skills.aiTag2": "Testing", "skills.aiTag3": "Code Review",

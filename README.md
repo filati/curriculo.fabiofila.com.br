@@ -2,7 +2,7 @@
 
 > +25 anos construindo sistemas escaláveis, APIs e integrações (REST, OAuth, ERPs), e-commerce e soluções corporativas — do levantamento de requisitos à entrega. Foco em qualidade e desenvolvimento potencializado por IA.
 
-🌐 **Site:** [curriculo.fabiofila.com.br](https://curriculo.fabiofila.com.br) · 📄 [Baixar CV (PDF)](assets/Fabio_Fila_CV.pdf)
+🌐 **Site:** [curriculo.fabiofila.com.br](https://curriculo.fabiofila.com.br) · 📄 [Baixar CV (PDF)](assets/Fabio_Fila_CV.pdf) · [English CV (PDF)](assets/Fabio_Fila_CV_EN.pdf)
 
 📍 Cotia – SP, Brasil · 🗣️ Português (nativo) / Inglês (avançado)
 
@@ -71,16 +71,18 @@ index.html          # página única
 assets/css/         # estilos
 assets/js/          # interações (tema, i18n PT/EN, animações)
 assets/logos/       # logos de clientes
-assets/Fabio_Fila_CV.pdf  # gerado a partir de pdf/cv.html
-pdf/cv.html         # fonte do CV em PDF
+assets/Fabio_Fila_CV.pdf     # gerado a partir de pdf/cv.html
+assets/Fabio_Fila_CV_EN.pdf  # gerado a partir de pdf/cv-en.html
+pdf/                # fontes dos CVs em PDF (PT e EN)
 ```
 
 Para visualizar localmente, basta abrir o `index.html` no navegador.
 
-Para regerar o PDF após editar `pdf/cv.html`:
+Para regerar os PDFs após editar `pdf/cv.html` / `pdf/cv-en.html`:
 
 ```bash
 google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=assets/Fabio_Fila_CV.pdf "file://$PWD/pdf/cv.html"
+google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=assets/Fabio_Fila_CV_EN.pdf "file://$PWD/pdf/cv-en.html"
 ```
 
 <sub>Feito com HTML, CSS, JS — e um toque de Claude Code 🤖</sub>

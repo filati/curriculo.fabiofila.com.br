@@ -234,6 +234,9 @@
     });
     document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
     document.getElementById("langLabel").textContent = lang === "en" ? "PT" : "EN";
+    document.querySelectorAll("[data-cv]").forEach((a) => {
+      a.href = lang === "en" ? "assets/Fabio_Fila_CV_EN.pdf" : "assets/Fabio_Fila_CV.pdf";
+    });
     state.lang = lang;
     localStorage.setItem("lang", lang);
   };

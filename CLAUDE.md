@@ -11,8 +11,9 @@ Files that matter:
 - `assets/js/main.js` — one IIFE with all interactions.
 - `assets/css/style.css` — all styles; design tokens on `:root`, dark-mode overrides under `[data-theme="dark"]`.
 - `assets/logos/` — client logos.
-- `pdf/cv.html` — print-only source of the downloadable CV `assets/Fabio_Fila_CV.pdf` (PT only). Uses a locally installed font (Noto Sans) on purpose: a Google Fonts variable font gets embedded as Type 3 glyphs. Regenerate after editing:
+- `pdf/cv.html` / `pdf/cv-en.html` — print-only sources of the downloadable CVs `assets/Fabio_Fila_CV.pdf` / `assets/Fabio_Fila_CV_EN.pdf`. Same CSS duplicated in both; keep them in sync. They use a locally installed font (Noto Sans) on purpose: a Google Fonts variable font gets embedded as Type 3 glyphs. Regenerate after editing (repeat with `cv-en.html` → `Fabio_Fila_CV_EN.pdf`):
   `google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=assets/Fabio_Fila_CV.pdf "file://$PWD/pdf/cv.html"`
+- Download links carry a `data-cv` attribute; `applyLang` in `main.js` points them at the PT or EN PDF.
 
 ## Bilingual content (PT/EN) — the key thing to know
 
@@ -25,7 +26,7 @@ Portuguese is the source language and lives **directly in `index.html`**. Englis
 
 ## Content kept in sync across files
 
-The same résumé content (experience, projects, skills, clients, contact) appears in three places: `index.html` (PT) + `I18N.en` in `main.js` (EN), `README.md`, and `pdf/cv.html` (→ the PDF). When the résumé content changes, update all of them and regenerate the PDF.
+The same résumé content (experience, projects, skills, clients, contact) appears in several places: `index.html` (PT) + `I18N.en` in `main.js` (EN), `README.md`, and `pdf/cv.html` + `pdf/cv-en.html` (→ the PDFs). When the résumé content changes, update all of them and regenerate both PDFs.
 
 ## Conventions
 

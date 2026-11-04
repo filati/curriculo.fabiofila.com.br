@@ -214,7 +214,7 @@ ul { list-style: none; }
 .tags--sm li { font-size: .8rem; padding: 5px 11px; }
 
 /* ---------- Timeline ---------- */
-.timeline { position: relative; padding-left: 8px; }
+.timeline { position: relative; padding-left: 8px; list-style: none; }
 .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px;
   background: linear-gradient(var(--primary), var(--accent), transparent); }
 .timeline__item { position: relative; padding: 0 0 28px 36px; }

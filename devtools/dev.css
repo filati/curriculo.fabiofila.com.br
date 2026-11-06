@@ -89,6 +89,7 @@ body { padding-top: var(--nav-h); }
 
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; gap: 18px; }
+  .devhead--tool ~ .layout > .panel { order: -1; } /* no celular, a ferramenta vem antes do menu */
   .menu { position: static; flex-direction: row; flex-wrap: wrap; gap: 14px 22px; }
   .menu__group { flex: 1 1 140px; }
   .tool { padding: 20px; }

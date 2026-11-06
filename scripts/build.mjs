@@ -126,6 +126,7 @@ function buildHomeEn() {
         node.url = SITE + HOME_EN;
         node.jobTitle = homeEn["meta.jobTitle"];
         node.description = homeEn["meta.ldDescription"];
+        node.knowsAbout = homeEn["meta.knowsAbout"];
         node.knowsLanguage = ["pt-BR", "en"];
       }
     }
@@ -158,14 +159,14 @@ const STR = {
     indexTitle: "Ferramentas Dev — Gerador de CPF e CNPJ, UUID, JSON, JWT e mais | Fábio Fila",
     indexDesc: "Ferramentas gratuitas para desenvolvedores, direto no navegador: gerador e validador de CPF/CNPJ (inclusive alfanumérico), UUID, senhas, JSON, Base64, regex, JWT, hash e timestamp Unix.",
     cardsDesc: "Escolha uma ferramenta. Tudo roda no seu navegador — nada é enviado a servidor algum.",
-    about: "Sobre esta ferramenta", resume: "Currículo", brand: "Fábio Fila", ogAlt: "Ferramentas Dev — Fábio Fila",
+    about: "Sobre esta ferramenta", resume: "Currículo", ogAlt: "Ferramentas Dev — Fábio Fila",
     groups: { docs: "Documentos", gen: "Geradores", data: "Texto e dados", debug: "Depuração" }
   },
   en: {
     indexTitle: "Dev Tools — CPF & CNPJ generator, UUID, JSON, JWT and more | Fábio Fila",
     indexDesc: "Free developer tools that run in your browser: CPF/CNPJ generator and validator (alphanumeric included), UUID, passwords, JSON, Base64, regex, JWT, hash and Unix timestamp.",
     cardsDesc: "Pick a tool. Everything runs in your browser — nothing is sent to any server.",
-    about: "About this tool", resume: "Résumé", brand: "Fábio Fila", ogAlt: "Dev Tools — Fábio Fila",
+    about: "About this tool", resume: "Résumé", ogAlt: "Dev Tools — Fábio Fila",
     groups: { docs: "Documents", gen: "Generators", data: "Text & data", debug: "Debugging" }
   }
 };

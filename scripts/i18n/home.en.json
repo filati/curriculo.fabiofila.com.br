@@ -120,5 +120,18 @@
   "meta.ogDescription": "25+ years building scalable systems, integrations and e-commerce. PHP, Laravel and AI-powered development.",
   "meta.ogImageAlt": "Fábio Fila — Back-End Developer. PHP, Laravel, REST APIs, integrations.",
   "meta.jobTitle": "Back-End / Full Stack Developer",
-  "meta.ldDescription": "Back-End / Full Stack Developer with 25+ years of experience in PHP, Laravel, integrations (REST, OAuth, ERPs) and e-commerce."
+  "meta.ldDescription": "Back-End / Full Stack Developer with 25+ years of experience in PHP, Laravel, integrations (REST, OAuth, ERPs) and e-commerce.",
+  "meta.knowsAbout": [
+    "PHP",
+    "Laravel",
+    "Symfony",
+    "Node.js",
+    "Python",
+    "REST APIs",
+    "OAuth",
+    "ERP integration",
+    "E-commerce",
+    "RabbitMQ",
+    "AI-assisted development"
+  ]
 }

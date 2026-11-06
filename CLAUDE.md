@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Static, single-page résumé site for Fábio Fila (served at https://curriculo.fabiofila.com.br). Plain HTML/CSS/JS — no dependencies, no package manager, no tests, no linter. Some pages are **generated** by a dependency-free Node script (`scripts/build.mjs`, see "Generated pages") and committed; nothing runs at deploy time. To preview, serve the folder with any static server, e.g. `python3 -m http.server` (paths are relative, so `file://` also works for most pages).
+Static, single-page résumé site for Fábio Fila (served at https://curriculo.fabiofila.com.br). Plain HTML/CSS/JS — no dependencies, no package manager, no tests, no linter. Some pages are **generated** by a dependency-free Node script (`scripts/build.mjs`, see "Generated pages") and committed; nothing runs at deploy time. To preview, serve the folder with any static server, e.g. `python3 -m http.server`.
 
 Files that matter:
 - `index.html` — the whole page; sections are `<section id="...">` (`hero`, `sobre`, `skills`, `experiencia`, `projetos`, `ia`, `clientes`, `formacao`, `contato`), linked from the nav.

@@ -99,6 +99,7 @@ ul { list-style: none; }
   font-size: .82rem; transition: all .2s ease;
 }
 .btn-icon:hover { border-color: var(--primary); color: var(--primary); }
+a.btn-icon { text-decoration: none; }
 
 /* ---------- Nav ---------- */
 .nav {

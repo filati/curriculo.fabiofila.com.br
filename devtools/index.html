@@ -3,16 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ferramentas Dev — Fábio Fila</title>
-  <meta name="description" content="Ferramentas úteis para desenvolvedores, direto no navegador: geradores e validador de CPF/CNPJ, UUID, senhas, JSON, Base64, regex, JWT, hash e timestamp." />
+  <title>Ferramentas Dev — Gerador de CPF e CNPJ, UUID, JSON, JWT e mais | Fábio Fila</title>
+  <meta name="description" content="Ferramentas gratuitas para desenvolvedores, direto no navegador: gerador e validador de CPF/CNPJ (inclusive alfanumérico), UUID, senhas, JSON, Base64, regex, JWT, hash e timestamp Unix." />
+  <meta name="author" content="Fábio Fila" />
   <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#6366f1" />
   <link rel="canonical" href="https://curriculo.fabiofila.com.br/devtools/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/" />
+  <link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/" />
+  <link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fábio Fila" />
+  <meta property="og:title" content="Ferramentas Dev — Gerador de CPF e CNPJ, UUID, JSON, JWT e mais | Fábio Fila" />
+  <meta property="og:description" content="Ferramentas gratuitas para desenvolvedores, direto no navegador: gerador e validador de CPF/CNPJ (inclusive alfanumérico), UUID, senhas, JSON, Base64, regex, JWT, hash e timestamp Unix." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://curriculo.fabiofila.com.br/devtools/" />
+  <meta property="og:image" content="https://curriculo.fabiofila.com.br/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ferramentas Dev — Fábio Fila" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ferramentas Dev — Gerador de CPF e CNPJ, UUID, JSON, JWT e mais | Fábio Fila" />
+  <meta name="twitter:description" content="Ferramentas gratuitas para desenvolvedores, direto no navegador: gerador e validador de CPF/CNPJ (inclusive alfanumérico), UUID, senhas, JSON, Base64, regex, JWT, hash e timestamp Unix." />
+  <meta name="twitter:image" content="https://curriculo.fabiofila.com.br/assets/og-image.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="dev.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>FF</text></svg>" />
+  <link rel="stylesheet" href="../devtools/dev.css" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <script id="lang-redirect">try{if(localStorage.getItem("lang")==="en")location.replace("../en/devtools/"+location.hash)}catch(e){}</script>
   <script>
     // aplica o tema antes da renderização para evitar flash
     try {
@@ -20,9 +45,110 @@
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Ferramentas Dev",
+  "url": "https://curriculo.fabiofila.com.br/devtools/",
+  "description": "Ferramentas gratuitas para desenvolvedores, direto no navegador: gerador e validador de CPF/CNPJ (inclusive alfanumérico), UUID, senhas, JSON, Base64, regex, JWT, hash e timestamp Unix.",
+  "inLanguage": "pt-BR",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Gerador de CPF",
+        "url": "https://curriculo.fabiofila.com.br/devtools/gerador-cpf/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gerador de CNPJ",
+        "url": "https://curriculo.fabiofila.com.br/devtools/gerador-cnpj/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Validador de CPF/CNPJ",
+        "url": "https://curriculo.fabiofila.com.br/devtools/validador-cpf-cnpj/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Gerador de UUID",
+        "url": "https://curriculo.fabiofila.com.br/devtools/gerador-uuid/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Gerador de senhas",
+        "url": "https://curriculo.fabiofila.com.br/devtools/gerador-senha/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Formatador de JSON",
+        "url": "https://curriculo.fabiofila.com.br/devtools/formatador-json/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Base64 / URL",
+        "url": "https://curriculo.fabiofila.com.br/devtools/base64-url/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "Testador de regex",
+        "url": "https://curriculo.fabiofila.com.br/devtools/testador-regex/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "Decodificador de JWT",
+        "url": "https://curriculo.fabiofila.com.br/devtools/decodificador-jwt/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "name": "Hash MD5 / SHA",
+        "url": "https://curriculo.fabiofila.com.br/devtools/hash-md5-sha/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "name": "Timestamp Unix",
+        "url": "https://curriculo.fabiofila.com.br/devtools/timestamp-unix/"
+      }
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Currículo",
+      "item": "https://curriculo.fabiofila.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ferramentas Dev",
+      "item": "https://curriculo.fabiofila.com.br/devtools/"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Pular para o conteúdo</a>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="nav scrolled">
     <div class="container nav__inner">
@@ -31,11 +157,9 @@
         <span class="nav__name">Fábio&nbsp;Fila</span>
       </a>
       <div class="nav__actions">
-        <a href="../" class="btn btn--ghost btn--sm" data-i18n="nav.back">← Currículo</a>
-        <button class="btn-icon" id="langToggle" title="PT / EN">
-          <span id="langLabel" lang="en">EN</span><span class="sr-only" id="langHint" lang="en"> — Switch to English</span>
-        </button>
-        <button class="btn-icon" id="themeToggle" aria-label="Alternar tema claro/escuro" data-i18n-aria="a11y.theme" title="Tema">
+        <a href="../" class="btn btn--ghost btn--sm">← Currículo</a>
+        <a class="btn-icon" id="langToggle" href="../en/devtools/" hreflang="en" lang="en" title="English version"><span>EN</span><span class="sr-only"> — Switch to English</span></a>
+        <button class="btn-icon" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Tema">
           <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
@@ -46,246 +170,89 @@
   <main id="conteudo">
     <section class="devhead">
       <div class="container">
-        <p class="devhead__eyebrow" data-i18n="dev.eyebrow">// ferramentas</p>
-        <h1 data-i18n="dev.title">Ferramentas Dev</h1>
-        <p class="devhead__lead" data-i18n="dev.lead">Utilitários que uso no dia a dia. Tudo roda no seu navegador — nada é enviado para servidor algum.</p>
+        <p class="devhead__eyebrow">// ferramentas</p>
+        <h1>Ferramentas Dev</h1>
+        <p class="devhead__lead">Utilitários que uso no dia a dia. Tudo roda no seu navegador — nada é enviado para servidor algum.</p>
       </div>
     </section>
 
     <div class="container layout">
-      <nav class="menu" aria-label="Ferramentas" data-i18n-aria="a11y.tools">
+      <nav class="menu" aria-label="Ferramentas">
         <div class="menu__group">
-          <p class="menu__title" data-i18n="menu.docs">Documentos</p>
+          <p class="menu__title">Documentos</p>
           <ul>
-            <li><a href="#cpf" data-tool="cpf" data-i18n="menu.cpf">Gerador de CPF</a></li>
-            <li><a href="#cnpj" data-tool="cnpj" data-i18n="menu.cnpj">Gerador de CNPJ</a></li>
-            <li><a href="#validar" data-tool="validar" data-i18n="menu.validar">Validador CPF/CNPJ</a></li>
+            <li><a href="gerador-cpf/" data-tool="cpf">Gerador de CPF</a></li>
+            <li><a href="gerador-cnpj/" data-tool="cnpj">Gerador de CNPJ</a></li>
+            <li><a href="validador-cpf-cnpj/" data-tool="validar">Validador CPF/CNPJ</a></li>
           </ul>
         </div>
         <div class="menu__group">
-          <p class="menu__title" data-i18n="menu.gen">Geradores</p>
+          <p class="menu__title">Geradores</p>
           <ul>
-            <li><a href="#uuid" data-tool="uuid" data-i18n="menu.uuid">UUID</a></li>
-            <li><a href="#senha" data-tool="senha" data-i18n="menu.senha">Senhas</a></li>
+            <li><a href="gerador-uuid/" data-tool="uuid">UUID</a></li>
+            <li><a href="gerador-senha/" data-tool="senha">Senhas</a></li>
           </ul>
         </div>
         <div class="menu__group">
-          <p class="menu__title" data-i18n="menu.data">Texto e dados</p>
+          <p class="menu__title">Texto e dados</p>
           <ul>
-            <li><a href="#json" data-tool="json" data-i18n="menu.json">JSON</a></li>
-            <li><a href="#base64" data-tool="base64" data-i18n="menu.base64">Base64 / URL</a></li>
-            <li><a href="#regex" data-tool="regex" data-i18n="menu.regex">Testador de regex</a></li>
+            <li><a href="formatador-json/" data-tool="json">JSON</a></li>
+            <li><a href="base64-url/" data-tool="base64">Base64 / URL</a></li>
+            <li><a href="testador-regex/" data-tool="regex">Testador de regex</a></li>
           </ul>
         </div>
         <div class="menu__group">
-          <p class="menu__title" data-i18n="menu.debug">Depuração</p>
+          <p class="menu__title">Depuração</p>
           <ul>
-            <li><a href="#jwt" data-tool="jwt" data-i18n="menu.jwt">Decodificador JWT</a></li>
-            <li><a href="#hash" data-tool="hash" data-i18n="menu.hash">Hash MD5 / SHA</a></li>
-            <li><a href="#tempo" data-tool="tempo" data-i18n="menu.tempo">Timestamp Unix</a></li>
+            <li><a href="decodificador-jwt/" data-tool="jwt">Decodificador JWT</a></li>
+            <li><a href="hash-md5-sha/" data-tool="hash">Hash MD5 / SHA</a></li>
+            <li><a href="timestamp-unix/" data-tool="tempo">Timestamp Unix</a></li>
           </ul>
         </div>
       </nav>
 
       <div class="panel">
-        <article class="tool" id="tool-cpf" aria-labelledby="cpf-title" hidden>
-          <h2 id="cpf-title" data-i18n="cpf.title">Gerador de CPF</h2>
-          <p class="tool__desc" data-i18n="cpf.desc">CPFs aleatórios com dígitos verificadores válidos. Apenas para testes.</p>
-          <div class="tool__opts">
-            <label class="field"><span data-i18n="common.qty">Quantidade</span><input type="number" id="cpf-qty" min="1" max="100" value="1" inputmode="numeric" /></label>
-            <label class="field"><span data-i18n="cpf.uf">Estado de emissão</span>
-              <select id="cpf-uf">
-                <option value="" data-i18n="cpf.any">Qualquer</option>
-                <option value="1">DF · GO · MS · MT · TO</option>
-                <option value="2">AC · AM · AP · PA · RO · RR</option>
-                <option value="3">CE · MA · PI</option>
-                <option value="4">AL · PB · PE · RN</option>
-                <option value="5">BA · SE</option>
-                <option value="6">MG</option>
-                <option value="7">ES · RJ</option>
-                <option value="8">SP</option>
-                <option value="9">PR · SC</option>
-                <option value="0">RS</option>
-              </select>
-            </label>
-            <label class="check"><input type="checkbox" id="cpf-mask" checked /> <span data-i18n="common.mask">Com pontuação</span></label>
-          </div>
-          <div class="tool__actions">
-            <button type="button" class="btn btn--primary btn--sm" id="cpf-gen" data-i18n="common.gen">Gerar</button>
-            <button type="button" class="btn btn--ghost btn--sm" id="cpf-copyall" data-i18n="common.copyall">Copiar todos</button>
-          </div>
-          <ul class="results" id="cpf-out" aria-live="polite"></ul>
-        </article>
-        <article class="tool" id="tool-cnpj" aria-labelledby="cnpj-title" hidden>
-          <h2 id="cnpj-title" data-i18n="cnpj.title">Gerador de CNPJ</h2>
-          <p class="tool__desc" data-i18n="cnpj.desc">CNPJs aleatórios com dígitos verificadores válidos, no formato numérico ou no novo alfanumérico. Apenas para testes.</p>
-          <div class="tool__opts">
-            <label class="field"><span data-i18n="common.qty">Quantidade</span><input type="number" id="cnpj-qty" min="1" max="100" value="1" inputmode="numeric" /></label>
-            <label class="check"><input type="checkbox" id="cnpj-alpha" /> <span data-i18n="cnpj.alpha">Alfanumérico</span></label>
-            <label class="check"><input type="checkbox" id="cnpj-mask" checked /> <span data-i18n="common.mask">Com pontuação</span></label>
-          </div>
-          <div class="tool__actions">
-            <button type="button" class="btn btn--primary btn--sm" id="cnpj-gen" data-i18n="common.gen">Gerar</button>
-            <button type="button" class="btn btn--ghost btn--sm" id="cnpj-copyall" data-i18n="common.copyall">Copiar todos</button>
-          </div>
-          <ul class="results" id="cnpj-out" aria-live="polite"></ul>
-        </article>
-        <article class="tool" id="tool-validar" aria-labelledby="validar-title" hidden>
-          <h2 id="validar-title" data-i18n="val.title">Validador de CPF/CNPJ</h2>
-          <p class="tool__desc" data-i18n="val.desc">Cole um CPF ou CNPJ (numérico ou alfanumérico) e veja se os dígitos verificadores conferem.</p>
-          <label class="field field--full"><span data-i18n="val.input">Número</span>
-            <input type="text" id="val-in" autocomplete="off" spellcheck="false" placeholder="000.000.000-00" />
-          </label>
-          <p class="status" id="val-out" role="status"></p>
-        </article>
-        <article class="tool" id="tool-uuid" aria-labelledby="uuid-title" hidden>
-          <h2 id="uuid-title" data-i18n="uuid.title">Gerador de UUID</h2>
-          <p class="tool__desc" data-i18n="uuid.desc">UUIDs v4 (aleatório) ou v7 (ordenável por data/hora, ótimo para chaves primárias).</p>
-          <div class="tool__opts">
-            <label class="field"><span data-i18n="common.qty">Quantidade</span><input type="number" id="uuid-qty" min="1" max="100" value="1" inputmode="numeric" /></label>
-            <label class="field"><span data-i18n="uuid.ver">Versão</span>
-              <select id="uuid-ver"><option value="4">v4</option><option value="7">v7</option></select>
-            </label>
-            <label class="check"><input type="checkbox" id="uuid-upper" /> <span data-i18n="common.upper">Maiúsculas</span></label>
-            <label class="check"><input type="checkbox" id="uuid-dash" checked /> <span data-i18n="uuid.dash">Com hífens</span></label>
-          </div>
-          <div class="tool__actions">
-            <button type="button" class="btn btn--primary btn--sm" id="uuid-gen" data-i18n="common.gen">Gerar</button>
-            <button type="button" class="btn btn--ghost btn--sm" id="uuid-copyall" data-i18n="common.copyall">Copiar todos</button>
-          </div>
-          <ul class="results" id="uuid-out" aria-live="polite"></ul>
-        </article>
-        <article class="tool" id="tool-senha" aria-labelledby="senha-title" hidden>
-          <h2 id="senha-title" data-i18n="pw.title">Gerador de senhas</h2>
-          <p class="tool__desc" data-i18n="pw.desc">Senhas aleatórias geradas com a API criptográfica do navegador.</p>
-          <div class="tool__opts">
-            <label class="field"><span data-i18n="common.qty">Quantidade</span><input type="number" id="pw-qty" min="1" max="100" value="1" inputmode="numeric" /></label>
-            <label class="field"><span data-i18n="pw.len">Tamanho</span><input type="number" id="pw-len" min="4" max="128" value="20" inputmode="numeric" /></label>
-          </div>
-          <div class="tool__opts">
-            <label class="check"><input type="checkbox" id="pw-lower" checked /> <span data-i18n="pw.lower">Minúsculas</span></label>
-            <label class="check"><input type="checkbox" id="pw-upper" checked /> <span data-i18n="pw.upper">Maiúsculas</span></label>
-            <label class="check"><input type="checkbox" id="pw-digit" checked /> <span data-i18n="pw.digit">Números</span></label>
-            <label class="check"><input type="checkbox" id="pw-sym" checked /> <span data-i18n="pw.sym">Símbolos</span></label>
-            <label class="check"><input type="checkbox" id="pw-amb" /> <span data-i18n="pw.amb">Evitar ambíguos (O 0 l 1 I)</span></label>
-          </div>
-          <div class="tool__actions">
-            <button type="button" class="btn btn--primary btn--sm" id="pw-gen" data-i18n="common.gen">Gerar</button>
-            <button type="button" class="btn btn--ghost btn--sm" id="pw-copyall" data-i18n="common.copyall">Copiar todos</button>
-          </div>
-          <ul class="results" id="pw-out" aria-live="polite"></ul>
-          <p class="hint" id="pw-info" aria-live="polite"></p>
-        </article>
-        <article class="tool" id="tool-json" aria-labelledby="json-title" hidden>
-          <h2 id="json-title" data-i18n="json.title">Formatador de JSON</h2>
-          <p class="tool__desc" data-i18n="json.desc">Valida, formata e minifica JSON, apontando onde está o erro.</p>
-          <label class="field field--full"><span data-i18n="json.in">Entrada</span>
-            <textarea id="json-in" rows="8" spellcheck="false" placeholder='{"nome":"Fábio"}'></textarea>
-          </label>
-          <div class="tool__opts">
-            <label class="field"><span data-i18n="json.indent">Indentação</span>
-              <select id="json-indent"><option value="2">2</option><option value="4">4</option><option value="tab">Tab</option></select>
-            </label>
-            <label class="check"><input type="checkbox" id="json-sort" /> <span data-i18n="json.sort">Ordenar chaves</span></label>
-          </div>
-          <div class="tool__actions">
-            <button type="button" class="btn btn--primary btn--sm" id="json-fmt" data-i18n="json.fmt">Formatar</button>
-            <button type="button" class="btn btn--ghost btn--sm" id="json-min" data-i18n="json.min">Minificar</button>
-            <button type="button" class="btn btn--ghost btn--sm" data-copy="json-out" data-i18n="common.copy">Copiar</button>
-          </div>
-          <p class="status" id="json-status" role="status"></p>
-          <label class="field field--full"><span data-i18n="common.result">Resultado</span>
-            <textarea id="json-out" rows="10" spellcheck="false" readonly></textarea>
-          </label>
-        </article>
-        <article class="tool" id="tool-base64" aria-labelledby="base64-title" hidden>
-          <h2 id="base64-title" data-i18n="b64.title">Base64 / URL</h2>
-          <p class="tool__desc" data-i18n="b64.desc">Codifica e decodifica texto em Base64, Base64URL ou URL (percent-encoding), com suporte a UTF-8.</p>
-          <div class="tool__opts">
-            <label class="field"><span data-i18n="b64.mode">Formato</span>
-              <select id="b64-mode"><option value="b64">Base64</option><option value="b64url">Base64URL</option><option value="url">URL</option></select>
-            </label>
-          </div>
-          <label class="field field--full"><span data-i18n="common.input">Entrada</span>
-            <textarea id="b64-in" rows="6" spellcheck="false"></textarea>
-          </label>
-          <div class="tool__actions">
-            <button type="button" class="btn btn--primary btn--sm" id="b64-enc" data-i18n="b64.enc">Codificar</button>
-            <button type="button" class="btn btn--primary btn--sm" id="b64-dec" data-i18n="b64.dec">Decodificar</button>
-            <button type="button" class="btn btn--ghost btn--sm" data-copy="b64-out" data-i18n="common.copy">Copiar</button>
-          </div>
-          <p class="status" id="b64-status" role="status"></p>
-          <label class="field field--full"><span data-i18n="common.result">Resultado</span>
-            <textarea id="b64-out" rows="6" spellcheck="false" readonly></textarea>
-          </label>
-        </article>
-        <article class="tool" id="tool-regex" aria-labelledby="regex-title" hidden>
-          <h2 id="regex-title" data-i18n="re.title">Testador de regex</h2>
-          <p class="tool__desc" data-i18n="re.desc">Teste expressões regulares (JavaScript) com destaque dos trechos encontrados e dos grupos de captura.</p>
-          <div class="tool__opts">
-            <label class="field field--grow"><span data-i18n="re.pattern">Expressão</span>
-              <input type="text" id="re-pattern" autocomplete="off" spellcheck="false" placeholder="(\d{3})\.(\d{3})" />
-            </label>
-            <label class="field"><span data-i18n="re.flags">Flags</span>
-              <input type="text" id="re-flags" value="g" maxlength="8" autocomplete="off" spellcheck="false" />
-            </label>
-          </div>
-          <label class="field field--full"><span data-i18n="re.text">Texto de teste</span>
-            <textarea id="re-text" rows="6" spellcheck="false"></textarea>
-          </label>
-          <p class="status" id="re-status" role="status"></p>
-          <div class="hl" id="re-hl" role="group" aria-label="Resultado" data-i18n-aria="re.hl"></div>
-          <ol class="matches" id="re-list" tabindex="0" aria-label="Correspondências" data-i18n-aria="re.list"></ol>
-        </article>
-        <article class="tool" id="tool-jwt" aria-labelledby="jwt-title" hidden>
-          <h2 id="jwt-title" data-i18n="jwt.title">Decodificador JWT</h2>
-          <p class="tool__desc" data-i18n="jwt.desc">Lê o cabeçalho e o conteúdo de um token JWT. A assinatura não é verificada.</p>
-          <label class="field field--full"><span data-i18n="jwt.in">Token</span>
-            <textarea id="jwt-in" rows="5" spellcheck="false" placeholder="eyJhbGciOi..."></textarea>
-          </label>
-          <p class="status" id="jwt-status" role="status"></p>
-          <div id="jwt-out" hidden>
-            <div class="jwt__box"><h3 data-i18n="jwt.header">Cabeçalho</h3><pre id="jwt-header"></pre></div>
-            <div class="jwt__box"><h3 data-i18n="jwt.payload">Conteúdo (payload)</h3><pre id="jwt-payload"></pre></div>
-            <div class="jwt__box" id="jwt-claims-box" hidden><h3 data-i18n="jwt.claims">Datas</h3><ul class="claims" id="jwt-claims"></ul></div>
-          </div>
-        </article>
-        <article class="tool" id="tool-hash" aria-labelledby="hash-title" hidden>
-          <h2 id="hash-title" data-i18n="hash.title">Hash MD5 / SHA</h2>
-          <p class="tool__desc" data-i18n="hash.desc">Calcula MD5, SHA-1, SHA-256, SHA-384 e SHA-512 do texto digitado (UTF-8).</p>
-          <label class="field field--full"><span data-i18n="common.input">Entrada</span>
-            <textarea id="hash-in" rows="5" spellcheck="false"></textarea>
-          </label>
-          <label class="check"><input type="checkbox" id="hash-upper" /> <span data-i18n="common.upper">Maiúsculas</span></label>
-          <ul class="results results--hash" id="hash-out" aria-live="polite"></ul>
-          <p class="hint" data-i18n="hash.note">MD5 e SHA-1 não são seguros para senhas ou assinaturas; use apenas para checksums e compatibilidade.</p>
-        </article>
-        <article class="tool" id="tool-tempo" aria-labelledby="tempo-title" hidden>
-          <h2 id="tempo-title" data-i18n="ts.title">Timestamp Unix</h2>
-          <p class="tool__desc" data-i18n="ts.desc">Converte timestamp Unix (segundos ou milissegundos) em data e vice-versa.</p>
-          <p class="now"><span data-i18n="ts.now">Agora:</span> <code id="ts-now"></code> <button type="button" class="btn btn--ghost btn--sm" id="ts-use-now" data-i18n="ts.usenow">Usar agora</button></p>
-          <h3 class="tool__sub" data-i18n="ts.t2d">Timestamp → data</h3>
-          <label class="field field--full"><span data-i18n="ts.in">Timestamp</span>
-            <input type="text" id="ts-in" inputmode="numeric" autocomplete="off" placeholder="1700000000" />
-          </label>
-          <p class="status" id="ts-status" role="status"></p>
-          <ul class="results results--hash" id="ts-out"></ul>
-          <h3 class="tool__sub" data-i18n="ts.d2t">Data → timestamp</h3>
-          <label class="field"><span data-i18n="ts.date">Data e hora (local)</span>
-            <input type="datetime-local" id="ts-date" step="1" />
-          </label>
-          <ul class="results results--hash" id="ts-out2"></ul>
-        </article>
+        <section class="cards" aria-labelledby="g-docs">
+          <h2 id="g-docs">Documentos</h2>
+          <ul class="cards__list">
+            <li><a class="card" href="gerador-cpf/"><strong>Gerador de CPF</strong><span>Gere CPFs válidos e aleatórios, com ou sem pontuação e por estado de emissão. Grátis, roda no navegador e serve para testes de software.</span></a></li>
+            <li><a class="card" href="gerador-cnpj/"><strong>Gerador de CNPJ</strong><span>Gere CNPJs válidos e aleatórios, no formato numérico tradicional ou no novo CNPJ alfanumérico. Grátis, no navegador, para testes de software.</span></a></li>
+            <li><a class="card" href="validador-cpf-cnpj/"><strong>Validador de CPF/CNPJ</strong><span>Cole um CPF ou CNPJ (numérico ou alfanumérico) e confira na hora se os dígitos verificadores estão corretos. Grátis e sem enviar dados a servidor.</span></a></li>
+          </ul>
+        </section>
+        <section class="cards" aria-labelledby="g-gen">
+          <h2 id="g-gen">Geradores</h2>
+          <ul class="cards__list">
+            <li><a class="card" href="gerador-uuid/"><strong>Gerador de UUID</strong><span>Gere UUIDs v4 (aleatórios) e v7 (ordenados por tempo, ótimos para chaves primárias). Em lote, com ou sem hífens, direto no navegador.</span></a></li>
+            <li><a class="card" href="gerador-senha/"><strong>Gerador de senhas</strong><span>Crie senhas aleatórias e fortes escolhendo tamanho e tipos de caractere. Geradas com a API criptográfica do navegador, sem enviar nada a servidor.</span></a></li>
+          </ul>
+        </section>
+        <section class="cards" aria-labelledby="g-data">
+          <h2 id="g-data">Texto e dados</h2>
+          <ul class="cards__list">
+            <li><a class="card" href="formatador-json/"><strong>Formatador de JSON</strong><span>Valide, formate (beautify) e minifique JSON apontando onde está o erro. Ordena chaves, roda no navegador e não envia seus dados.</span></a></li>
+            <li><a class="card" href="base64-url/"><strong>Base64 / URL</strong><span>Codifique e decodifique texto em Base64, Base64URL e URL (percent-encoding) com suporte a UTF-8 e acentos. Grátis e no navegador.</span></a></li>
+            <li><a class="card" href="testador-regex/"><strong>Testador de regex</strong><span>Teste expressões regulares JavaScript com destaque dos matches, grupos de captura e flags. Resultado em tempo real, direto no navegador.</span></a></li>
+          </ul>
+        </section>
+        <section class="cards" aria-labelledby="g-debug">
+          <h2 id="g-debug">Depuração</h2>
+          <ul class="cards__list">
+            <li><a class="card" href="decodificador-jwt/"><strong>Decodificador de JWT</strong><span>Decodifique o header e o payload de um JSON Web Token e veja as datas de emissão e expiração. Tudo local: o token não sai do seu navegador.</span></a></li>
+            <li><a class="card" href="hash-md5-sha/"><strong>Hash MD5 / SHA</strong><span>Calcule MD5, SHA-1, SHA-256, SHA-384 e SHA-512 de qualquer texto (UTF-8). Grátis, instantâneo e sem enviar o texto a servidor.</span></a></li>
+            <li><a class="card" href="timestamp-unix/"><strong>Timestamp Unix</strong><span>Converta timestamp Unix (segundos ou milissegundos) em data legível e data em timestamp, com ISO 8601, UTC e horário local.</span></a></li>
+          </ul>
+        </section>
       </div>
     </div>
   </main>
 
   <footer class="devfoot">
     <div class="container">
-      <p data-i18n="dev.disclaimer">Os números gerados são fictícios e servem apenas para testes e desenvolvimento. Não os utilize para fins fraudulentos.</p>
+      <p>Os números gerados são fictícios e servem apenas para testes e desenvolvimento. Não os utilize para fins fraudulentos.</p>
     </div>
   </footer>
 
-  <script src="dev.js"></script>
+  <script src="../devtools/dev.js"></script>
 </body>
 </html>

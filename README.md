@@ -66,21 +66,33 @@ Sanofi · McDonald's · SERASA · Bunge · Santander · Vivo · Óticas Carol ·
 
 ## Sobre este repositório
 
-Site estático (HTML · CSS · JS) do currículo, sem dependências ou build.
+Site estático (HTML · CSS · JS) do currículo. Não há build para publicar, mas as páginas em inglês e as de `/devtools/` são **geradas** por um script Node sem dependências (`scripts/build.mjs`) e commitadas.
 
 ```
-index.html          # página única
+index.html          # home em português (editada à mão)
+en/index.html       # home em inglês (GERADA)
+robots.txt          # robôs de busca + endereço do sitemap
+sitemap.xml         # GERADO, com hreflang PT/EN
 assets/css/         # estilos
-assets/js/          # interações (tema, i18n PT/EN, animações)
+assets/js/          # interações (tema, animações)
+scripts/            # gerador (build.mjs), textos EN (i18n/), fontes das ferramentas e metadados de SEO (tools.mjs)
 assets/logos/       # logos de clientes
-devtools/           # /devtools: ferramentas para devs (CPF/CNPJ, UUID, senhas, JSON, Base64, regex, JWT, hash, timestamp)
+devtools/           # /devtools/: índice + uma página por ferramenta (GERADAS; dev.js e dev.css são à mão)
+en/devtools/        # versão em inglês das ferramentas (GERADA)
 assets/Fabio_Fila_CV.pdf     # gerado a partir de pdf/cv.html
 assets/Fabio_Fila_CV_EN.pdf  # gerado a partir de pdf/cv-en.html
 assets/og-image.png  # imagem de compartilhamento (og:image)
 pdf/                # fontes dos PDFs (PT e EN) e da og:image
 ```
 
-Para visualizar localmente, basta abrir o `index.html` no navegador.
+Para visualizar localmente, sirva a pasta com qualquer servidor estático (ex.: `python3 -m http.server`).
+
+Depois de editar `index.html`, `scripts/i18n/*.json`, `scripts/src/*` ou `scripts/tools.mjs`, regenere as páginas derivadas:
+
+```bash
+node scripts/build.mjs          # grava en/, devtools/**, sitemap.xml
+node scripts/build.mjs --check  # só confere se estão em dia
+```
 
 **Deploy:** automático no Cloudflare Workers (projeto `curriculo`) a cada push na `main`, via `npx wrangler deploy` com a config em `wrangler.jsonc`. Arquivos que não devem ser publicados ficam em `.assetsignore`.
 

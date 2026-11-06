@@ -6,9 +6,17 @@
   <title>Fábio Fila — Desenvolvedor Back-End / Full Stack</title>
   <meta name="description" content="Fábio Fila — Desenvolvedor Back-End / Full Stack com +25 anos de experiência em PHP, Laravel, integrações e e-commerce. Desenvolvimento potencializado por IA (Claude Code)." />
   <meta name="author" content="Fábio Fila" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://curriculo.fabiofila.com.br/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/" />
+  <link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/" />
+  <script id="lang-redirect">try{if(localStorage.getItem("lang")==="en")location.replace("en/"+location.hash)}catch(e){}</script>
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fábio Fila" />
   <meta property="og:title" content="Fábio Fila — Desenvolvedor Back-End / Full Stack" />
   <meta property="og:description" content="+25 anos desenvolvendo sistemas escaláveis, integrações e e-commerce. PHP, Laravel e desenvolvimento potencializado por IA." />
   <meta property="og:locale" content="pt_BR" />
@@ -19,12 +27,71 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Fábio Fila — Desenvolvedor Back-End. PHP, Laravel, APIs REST, integrações." />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fábio Fila — Desenvolvedor Back-End / Full Stack" />
+  <meta name="twitter:description" content="+25 anos desenvolvendo sistemas escaláveis, integrações e e-commerce. PHP, Laravel e desenvolvimento potencializado por IA." />
+  <meta name="twitter:image" content="https://curriculo.fabiofila.com.br/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="Fábio Fila — Desenvolvedor Back-End. PHP, Laravel, APIs REST, integrações." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>FF</text></svg>" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://curriculo.fabiofila.com.br/#website",
+      "url": "https://curriculo.fabiofila.com.br/",
+      "name": "Fábio Fila — Currículo",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://curriculo.fabiofila.com.br/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://curriculo.fabiofila.com.br/#person",
+      "name": "Fábio Fila",
+      "url": "https://curriculo.fabiofila.com.br/",
+      "image": "https://curriculo.fabiofila.com.br/assets/og-image.png",
+      "jobTitle": "Desenvolvedor Back-End / Full Stack",
+      "description": "Desenvolvedor Back-End / Full Stack com mais de 25 anos de experiência em PHP, Laravel, integrações (REST, OAuth, ERPs) e e-commerce.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotia",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://github.com/filati",
+        "https://www.linkedin.com/in/fabio-f-2588968/"
+      ],
+      "knowsAbout": [
+        "PHP",
+        "Laravel",
+        "Symfony",
+        "Node.js",
+        "Python",
+        "APIs REST",
+        "OAuth",
+        "Integração com ERPs",
+        "E-commerce",
+        "RabbitMQ",
+        "Desenvolvimento com IA"
+      ],
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Pular para o conteúdo</a>
@@ -47,9 +114,7 @@
       </nav>
 
       <div class="nav__actions">
-        <button class="btn-icon" id="langToggle" title="PT / EN">
-          <span id="langLabel" lang="en">EN</span><span class="sr-only" id="langHint" lang="en"> — Switch to English</span>
-        </button>
+        <a class="btn-icon" id="langToggle" href="en/" hreflang="en" lang="en" title="English version"><span>EN</span><span class="sr-only"> — Switch to English</span></a>
         <button class="btn-icon" id="themeToggle" aria-label="Alternar tema claro/escuro" data-i18n-aria="a11y.theme" title="Tema">
           <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>

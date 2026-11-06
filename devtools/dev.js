@@ -3,7 +3,15 @@
   "use strict";
 
   var root = document.documentElement;
-  function $(id) { return document.getElementById(id); }
+  // Cada página de /devtools/ traz só UMA ferramenta (gerada por scripts/build.mjs). Para os ids das demais,
+  // devolvemos um nó solto (dentro de um ".tool" falso), de modo que os listeners abaixo não precisem de checagem.
+  function $(id) {
+    var el = document.getElementById(id);
+    if (el) return el;
+    var wrap = document.createElement("div");
+    wrap.className = "tool";
+    return wrap.appendChild(document.createElement("div"));
+  }
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) {} return null; }
 
   /* ---------- Tema ---------- */
@@ -13,101 +21,17 @@
     store("theme", next);
   });
 
-  /* ---------- Idioma (PT no HTML; EN aqui) ---------- */
-  var EN = {
-    "a11y.skip": "Skip to content", "a11y.theme": "Toggle light/dark theme", "a11y.tools": "Tools", "nav.back": "← Résumé",
-    "dev.eyebrow": "// tools", "dev.title": "Dev Tools",
-    "dev.lead": "Utilities I use day to day. Everything runs in your browser — nothing is sent to any server.",
-    "dev.disclaimer": "Generated numbers are fictitious and meant only for testing and development. Do not use them for fraudulent purposes.",
-    "menu.docs": "Documents", "menu.gen": "Generators", "menu.data": "Text & data", "menu.debug": "Debugging",
-    "menu.cpf": "CPF generator", "menu.cnpj": "CNPJ generator", "menu.validar": "CPF/CNPJ validator",
-    "menu.uuid": "UUID", "menu.senha": "Passwords", "menu.json": "JSON", "menu.base64": "Base64 / URL",
-    "menu.regex": "Regex tester", "menu.jwt": "JWT decoder", "menu.hash": "MD5 / SHA hash", "menu.tempo": "Unix timestamp",
-    "common.qty": "Quantity", "common.mask": "Formatted", "common.gen": "Generate", "common.copyall": "Copy all",
-    "common.copy": "Copy", "common.upper": "Uppercase", "common.input": "Input", "common.result": "Result",
-    "cpf.title": "CPF generator", "cpf.desc": "Random CPFs with valid check digits. For testing only.",
-    "cpf.uf": "Issuing state", "cpf.any": "Any",
-    "cnpj.title": "CNPJ generator",
-    "cnpj.desc": "Random CNPJs with valid check digits, in the numeric or the new alphanumeric format. For testing only.",
-    "cnpj.alpha": "Alphanumeric",
-    "val.title": "CPF/CNPJ validator", "val.desc": "Paste a CPF or CNPJ (numeric or alphanumeric) and check whether the check digits match.",
-    "val.input": "Number",
-    "uuid.title": "UUID generator", "uuid.desc": "v4 (random) or v7 (time-ordered, great for primary keys) UUIDs.",
-    "uuid.ver": "Version", "uuid.dash": "With hyphens",
-    "pw.title": "Password generator", "pw.desc": "Random passwords generated with the browser's cryptographic API.",
-    "pw.len": "Length", "pw.lower": "Lowercase", "pw.upper": "Uppercase", "pw.digit": "Numbers", "pw.sym": "Symbols",
-    "pw.amb": "Avoid ambiguous (O 0 l 1 I)",
-    "json.title": "JSON formatter", "json.desc": "Validates, formats and minifies JSON, pointing out where the error is.",
-    "json.in": "Input", "json.indent": "Indentation", "json.sort": "Sort keys", "json.fmt": "Format", "json.min": "Minify",
-    "b64.title": "Base64 / URL", "b64.desc": "Encodes and decodes text as Base64, Base64URL or URL (percent-encoding), UTF-8 aware.",
-    "b64.mode": "Format", "b64.enc": "Encode", "b64.dec": "Decode",
-    "re.title": "Regex tester", "re.desc": "Test (JavaScript) regular expressions with highlighted matches and capture groups.",
-    "re.pattern": "Pattern", "re.flags": "Flags", "re.text": "Test text", "re.hl": "Result", "re.list": "Matches",
-    "jwt.title": "JWT decoder", "jwt.desc": "Reads the header and payload of a JWT. The signature is not verified.",
-    "jwt.in": "Token", "jwt.header": "Header", "jwt.payload": "Payload", "jwt.claims": "Dates",
-    "hash.title": "MD5 / SHA hash", "hash.desc": "Computes MD5, SHA-1, SHA-256, SHA-384 and SHA-512 of the typed text (UTF-8).",
-    "hash.note": "MD5 and SHA-1 are not safe for passwords or signatures; use them only for checksums and compatibility.",
-    "ts.title": "Unix timestamp", "ts.desc": "Converts Unix timestamps (seconds or milliseconds) to dates and back.",
-    "ts.now": "Now:", "ts.usenow": "Use now", "ts.t2d": "Timestamp → date", "ts.d2t": "Date → timestamp",
-    "ts.in": "Timestamp", "ts.date": "Date and time (local)"
-  };
-  var lang = store("lang") === "en" ? "en" : "pt";
+  /* ---------- Idioma: PT (/devtools/) e EN (/en/devtools/) são páginas separadas ---------- */
+  var lang = root.lang === "en" ? "en" : "pt";
   function L(pt, en) { return lang === "en" ? en : pt; }
+  store("lang", lang);
+  $("langToggle").addEventListener("click", function () { store("lang", lang === "en" ? "pt" : "en"); });
 
-  var ptHtml = new Map(), ptAria = new Map();
-  document.querySelectorAll("[data-i18n]").forEach(function (el) { ptHtml.set(el, el.innerHTML); });
-  document.querySelectorAll("[data-i18n-aria]").forEach(function (el) { ptAria.set(el, el.getAttribute("aria-label")); });
-  var refreshers = [];
-
-  function applyLang(l) {
-    lang = l;
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n");
-      el.innerHTML = l === "en" && EN[k] != null ? EN[k] : ptHtml.get(el);
-    });
-    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n-aria");
-      el.setAttribute("aria-label", l === "en" && EN[k] != null ? EN[k] : ptAria.get(el));
-    });
-    root.lang = l === "en" ? "en" : "pt-BR";
-    var lbl = $("langLabel"), hint = $("langHint");
-    lbl.textContent = l === "en" ? "PT" : "EN";
-    hint.textContent = l === "en" ? " — Mudar para português" : " — Switch to English";
-    lbl.lang = hint.lang = l === "en" ? "pt-BR" : "en";
-    document.querySelectorAll("button[data-value]").forEach(function (b) {
-      b.textContent = L("Copiar", "Copy"); b.setAttribute("aria-label", L("Copiar ", "Copy ") + b.dataset.value);
-    });
-    updateTitle();
-    refreshers.forEach(function (fn) { fn(); });
-    store("lang", l);
+  /* ---------- Links antigos (/devtools/#cpf) levam à página da ferramenta ---------- */
+  if (!document.querySelector(".tool") && location.hash.length > 1) {
+    var old = document.querySelector('.menu a[data-tool="' + location.hash.slice(1).replace(/[^\w-]/g, "") + '"]');
+    if (old) location.replace(old.getAttribute("href"));
   }
-  $("langToggle").addEventListener("click", function () { applyLang(lang === "en" ? "pt" : "en"); });
-
-  /* ---------- Menu / navegação por hash ---------- */
-  var links = document.querySelectorAll(".menu a[data-tool]");
-  var DEFAULT_TOOL = "cpf";
-  function currentTool() {
-    var id = location.hash.replace("#", "");
-    return document.getElementById("tool-" + id) ? id : DEFAULT_TOOL;
-  }
-  function updateTitle() {
-    var a = document.querySelector('.menu a[aria-current="page"]');
-    var name = a ? a.textContent : "";
-    document.title = (name ? name + " · " : "") + L("Ferramentas Dev — Fábio Fila", "Dev Tools — Fábio Fila");
-  }
-  function showTool() {
-    var id = currentTool();
-    document.querySelectorAll(".tool").forEach(function (t) { t.hidden = t.id !== "tool-" + id; });
-    links.forEach(function (a) {
-      if (a.dataset.tool === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
-    });
-    updateTitle();
-  }
-  window.addEventListener("hashchange", function () {
-    showTool();
-    // no celular o painel fica abaixo do menu: leva a pessoa até ele
-    if (window.matchMedia("(max-width: 860px)").matches) document.querySelector(".panel").scrollIntoView({ behavior: "smooth", block: "start" });
-  });
 
   /* ---------- Utilidades ---------- */
   function randInt(max) {
@@ -269,7 +193,6 @@
     setStatus(el, ok, ok ? "✓ " + kind + L(" válido.", " is valid.") : "✗ " + kind + L(" inválido (dígitos verificadores não conferem).", " is invalid (check digits do not match)."));
   }
   $("val-in").addEventListener("input", runValidate);
-  refreshers.push(runValidate);
 
   /* ---------- UUID ---------- */
   function hex(b) { return Array.prototype.map.call(b, function (x) { return (x < 16 ? "0" : "") + x.toString(16); }).join(""); }
@@ -314,7 +237,6 @@
     $("pw-info").textContent = L("Entropia aproximada: ", "Approximate entropy: ") + lastBits + " bits";
   }
   setupList("pw", password, pwInfo);
-  refreshers.push(pwInfo);
 
   /* ---------- JSON ---------- */
   function sortKeys(v) {
@@ -405,7 +327,6 @@
     hl.appendChild(document.createTextNode(text.slice(pos)));
   }
   ["re-pattern", "re-flags", "re-text"].forEach(function (id) { $(id).addEventListener("input", regexRun); });
-  refreshers.push(regexRun);
 
   /* ---------- JWT ---------- */
   function fmtDate(sec) { return new Date(sec * 1000).toLocaleString(lang === "en" ? "en-US" : "pt-BR"); }
@@ -443,7 +364,6 @@
     }
   }
   $("jwt-in").addEventListener("input", jwtRun);
-  refreshers.push(jwtRun);
 
   /* ---------- Hash (MD5 próprio; SHA via Web Crypto) ---------- */
   function md5(bytes) {
@@ -527,18 +447,13 @@
     addRow(out, String(d.getTime()), L("Milissegundos", "Milliseconds"));
     addRow(out, d.toISOString(), "UTC (ISO 8601)");
   }
-  function tickNow() { if ($("tool-tempo").hidden) return; $("ts-now").textContent = Math.floor(Date.now() / 1000); }
+  function tickNow() { if (!document.getElementById("tool-tempo")) return; $("ts-now").textContent = Math.floor(Date.now() / 1000); }
   $("ts-in").addEventListener("input", tsRun);
   $("ts-date").addEventListener("input", dateRun);
   $("ts-use-now").addEventListener("click", function () { $("ts-in").value = Math.floor(Date.now() / 1000); tsRun(); });
-  tickNow(); setInterval(tickNow, 1000);
-  window.addEventListener("hashchange", tickNow);
+  tickNow();
+  if (document.getElementById("tool-tempo")) setInterval(tickNow, 1000);
   var nowD = new Date();
   $("ts-date").value = nowD.getFullYear() + "-" + pad(nowD.getMonth() + 1) + "-" + pad(nowD.getDate()) + "T" + pad(nowD.getHours()) + ":" + pad(nowD.getMinutes()) + ":" + pad(nowD.getSeconds());
   dateRun();
-  refreshers.push(tsRun, dateRun);
-
-  /* ---------- Início ---------- */
-  showTool();
-  if (lang === "en") applyLang("en");
 })();

@@ -5,5 +5,7 @@
   // Site estático: serve a raiz do repositório (exclusões em .assetsignore)
   "assets": {
     "directory": "."
-  }
+  },
+  // Necessário para o `wrangler preview` (build de branches/PRs no Workers Builds)
+  "previews": {}
 }

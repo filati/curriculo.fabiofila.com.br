@@ -142,7 +142,7 @@
   const I18N = {
     en: {
       "nav.about": "About", "nav.skills": "Skills", "nav.experience": "Experience",
-      "nav.projects": "Projects", "nav.ai": "AI", "nav.contact": "Contact",
+      "nav.projects": "Projects", "nav.ai": "AI", "nav.contact": "Contact", "nav.devtools": "Dev Tools",
       "nav.download": "Download CV",
 
       "hero.eyebrow": "<span aria-hidden=\"true\">👋</span> Hi, I'm",

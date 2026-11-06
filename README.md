@@ -73,6 +73,7 @@ index.html          # página única
 assets/css/         # estilos
 assets/js/          # interações (tema, i18n PT/EN, animações)
 assets/logos/       # logos de clientes
+devtools/           # /devtools: ferramentas para devs (gerador de CPF e CNPJ)
 assets/Fabio_Fila_CV.pdf     # gerado a partir de pdf/cv.html
 assets/Fabio_Fila_CV_EN.pdf  # gerado a partir de pdf/cv-en.html
 assets/og-image.png  # imagem de compartilhamento (og:image)

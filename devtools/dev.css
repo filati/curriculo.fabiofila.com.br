@@ -1,26 +1,49 @@
 /* Ferramentas Dev — estilos específicos (tokens vêm de ../assets/css/style.css) */
+:root { --ok: #166534; --bad: #b91c1c; --mark: rgba(79, 70, 229, 0.22); }
+[data-theme="dark"] { --ok: #4ade80; --bad: #f87171; --mark: rgba(129, 140, 248, 0.32); }
+
 body { padding-top: var(--nav-h); }
-.devhead { padding: 56px 0 28px; }
+[hidden] { display: none !important; }
+.devhead { padding: 48px 0 24px; }
 .devhead__eyebrow { font-family: var(--mono); color: var(--primary); font-size: .9rem; margin-bottom: 8px; }
 .devhead h1 { font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -.02em; line-height: 1.15; }
 .devhead__lead { color: var(--text-soft); margin-top: 12px; max-width: 60ch; }
 
-.tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; padding-bottom: 72px; }
+/* Layout: menu lateral + painel */
+.layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 28px; align-items: start; padding-bottom: 72px; }
+.menu { position: sticky; top: calc(var(--nav-h) + 16px); display: flex; flex-direction: column; gap: 18px; }
+.menu__title { font-family: var(--mono); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-mut); margin-bottom: 6px; padding: 0 12px; }
+.menu ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.menu a {
+  display: block; padding: 8px 12px; border-radius: 8px; font-size: .92rem; font-weight: 500;
+  color: var(--text-soft); transition: color .2s, background .2s;
+}
+.menu a:hover { color: var(--primary); background: var(--primary-ghost); }
+.menu a[aria-current="page"] { color: var(--primary); background: var(--primary-ghost); font-weight: 700; }
+
 .tool {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 26px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 16px; min-width: 0;
 }
-.tool h2 { font-size: 1.25rem; letter-spacing: -.01em; }
+.tool h2 { font-size: 1.3rem; letter-spacing: -.01em; }
+.tool__sub { font-size: 1rem; margin-top: 6px; }
 .tool__desc { color: var(--text-soft); font-size: .95rem; margin-top: -8px; }
 .tool__opts { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: flex-end; }
 .tool__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hint { color: var(--text-mut); font-size: .85rem; }
 
 .field { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; font-weight: 600; color: var(--text-soft); }
-.field input, .field select {
+.field--full { width: 100%; }
+.field--grow { flex: 1 1 220px; }
+.field input, .field select, .field textarea {
   font: inherit; font-weight: 500; color: var(--text); background: var(--bg);
-  border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 9px 12px; min-width: 110px;
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 9px 12px; min-width: 110px; width: 100%;
 }
-.field input:focus-visible, .field select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.field textarea { font-family: var(--mono); font-size: .9rem; resize: vertical; line-height: 1.5; }
+.field input[type="text"] { font-family: var(--mono); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.tool__opts .field { width: auto; }
+.tool__opts .field--grow { width: auto; }
 .check { display: inline-flex; align-items: center; gap: 8px; font-size: .92rem; color: var(--text); padding-bottom: 9px; cursor: pointer; }
 .check input { width: 18px; height: 18px; accent-color: var(--primary); }
 
@@ -29,11 +52,44 @@ body { padding-top: var(--nav-h); }
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   background: var(--surface-2); border-radius: var(--radius-sm); padding: 8px 8px 8px 14px;
 }
-.results code { font-family: var(--mono); font-size: 1.02rem; color: var(--text); overflow-wrap: anywhere; }
+.results code { font-family: var(--mono); font-size: 1rem; color: var(--text); overflow-wrap: anywhere; word-break: break-all; }
+.results--hash .lbl { font-size: .75rem; font-weight: 700; color: var(--text-mut); display: block; font-family: var(--font); }
 .results button {
   font: inherit; font-size: .8rem; font-weight: 600; cursor: pointer; color: var(--text);
   background: var(--surface); border: 1.5px solid var(--border); border-radius: 999px; padding: 6px 14px; flex: none;
 }
 .results button:hover { border-color: var(--primary); color: var(--primary); }
 
+.status { min-height: 1.4em; font-weight: 600; font-size: .95rem; }
+.status.ok { color: var(--ok); }
+.status.bad { color: var(--bad); }
+
+.hl {
+  font-family: var(--mono); font-size: .9rem; white-space: pre-wrap; overflow-wrap: anywhere;
+  background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px; min-height: 3em;
+}
+.hl:empty { display: none; }
+.hl mark { background: var(--mark); color: inherit; border-radius: 3px; outline: 1px solid var(--primary); }
+.matches { padding-left: 1.4em; display: flex; flex-direction: column; gap: 8px; font-size: .9rem; max-height: 320px; overflow: auto; }
+.matches code { font-family: var(--mono); background: var(--surface-2); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+.matches .sub { color: var(--text-soft); display: block; font-size: .82rem; }
+
+.jwt__box h3 { font-size: .9rem; margin-bottom: 6px; color: var(--text-soft); }
+.jwt__box { margin-bottom: 14px; }
+.jwt__box pre, .jwt__box .claims {
+  font-family: var(--mono); font-size: .88rem; background: var(--surface-2); border-radius: var(--radius-sm);
+  padding: 12px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.claims { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.claims .exp-ok { color: var(--ok); font-weight: 700; }
+.claims .exp-bad { color: var(--bad); font-weight: 700; }
+.now code { font-family: var(--mono); background: var(--surface-2); padding: 2px 8px; border-radius: 6px; margin: 0 6px; }
+
 .devfoot { border-top: 1px solid var(--border); padding: 24px 0; color: var(--text-mut); font-size: .88rem; }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; gap: 18px; }
+  .menu { position: static; flex-direction: row; flex-wrap: wrap; gap: 14px 22px; }
+  .menu__group { flex: 1 1 140px; }
+  .tool { padding: 20px; }
+}

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/gerador-cpf/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-cpf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/gerador-cpf/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-cpf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/gerador-cnpj/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-cnpj/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/gerador-cnpj/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-cnpj/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/validador-cpf-cnpj/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/validador-cpf-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/validador-cpf-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/validador-cpf-cnpj/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/validador-cpf-cnpj/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/validador-cpf-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/validador-cpf-cnpj/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/validador-cpf-cnpj/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/gerador-uuid/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-uuid/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-uuid/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-uuid/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-uuid/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/gerador-senha/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-senha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-senha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-senha/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/gerador-senha/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-senha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-senha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-senha/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/formatador-json/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/formatador-json/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/formatador-json/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/formatador-json/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/formatador-json/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/formatador-json/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/formatador-json/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/formatador-json/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/base64-url/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/base64-url/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/base64-url/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/base64-url/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/base64-url/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/base64-url/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/base64-url/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/base64-url/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/testador-regex/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/testador-regex/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/testador-regex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/testador-regex/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/testador-regex/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/testador-regex/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/testador-regex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/testador-regex/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/decodificador-jwt/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/decodificador-jwt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/decodificador-jwt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/decodificador-jwt/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/decodificador-jwt/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/decodificador-jwt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/decodificador-jwt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/decodificador-jwt/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/hash-md5-sha/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/hash-md5-sha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/hash-md5-sha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/hash-md5-sha/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/hash-md5-sha/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/hash-md5-sha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/hash-md5-sha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/hash-md5-sha/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/devtools/timestamp-unix/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/timestamp-unix/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/timestamp-unix/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/timestamp-unix/"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://curriculo.fabiofila.com.br/en/devtools/timestamp-unix/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/timestamp-unix/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/timestamp-unix/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/timestamp-unix/"/>
+    <priority>0.6</priority>
+  </url>
+</urlset>

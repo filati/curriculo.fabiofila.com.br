@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de CPF válido online | Fábio Fila</title>
+  <meta name="description" content="Gere CPFs válidos e aleatórios, com ou sem pontuação e por estado de emissão. Grátis, roda no navegador e serve para testes de software." />
+  <meta name="author" content="Fábio Fila" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/" />
+  <link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-cpf/" />
+  <link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fábio Fila" />
+  <meta property="og:title" content="Gerador de CPF válido online | Fábio Fila" />
+  <meta property="og:description" content="Gere CPFs válidos e aleatórios, com ou sem pontuação e por estado de emissão. Grátis, roda no navegador e serve para testes de software." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://curriculo.fabiofila.com.br/devtools/gerador-cpf/" />
+  <meta property="og:image" content="https://curriculo.fabiofila.com.br/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ferramentas Dev — Fábio Fila" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gerador de CPF válido online | Fábio Fila" />
+  <meta name="twitter:description" content="Gere CPFs válidos e aleatórios, com ou sem pontuação e por estado de emissão. Grátis, roda no navegador e serve para testes de software." />
+  <meta name="twitter:image" content="https://curriculo.fabiofila.com.br/assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../devtools/dev.css" />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../../assets/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
+  <script id="lang-redirect">try{if(localStorage.getItem("lang")==="en")location.replace("../../en/devtools/gerador-cpf/"+location.hash)}catch(e){}</script>
+  <script>
+    // aplica o tema antes da renderização para evitar flash
+    try {
+      var t = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gerador de CPF",
+  "url": "https://curriculo.fabiofila.com.br/devtools/gerador-cpf/",
+  "description": "Gere CPFs válidos e aleatórios, com ou sem pontuação e por estado de emissão. Grátis, roda no navegador e serve para testes de software.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fábio Fila",
+    "url": "https://curriculo.fabiofila.com.br/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Currículo",
+      "item": "https://curriculo.fabiofila.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ferramentas Dev",
+      "item": "https://curriculo.fabiofila.com.br/devtools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Gerador de CPF",
+      "item": "https://curriculo.fabiofila.com.br/devtools/gerador-cpf/"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="nav scrolled">
+    <div class="container nav__inner">
+      <a href="../../" class="nav__brand">
+        <span class="nav__logo" aria-hidden="true">FF</span>
+        <span class="nav__name">Fábio&nbsp;Fila</span>
+      </a>
+      <div class="nav__actions">
+        <a href="../../" class="btn btn--ghost btn--sm">← Currículo</a>
+        <a class="btn-icon" id="langToggle" href="../../en/devtools/gerador-cpf/" hreflang="en" lang="en" title="English version"><span>EN</span><span class="sr-only"> — Switch to English</span></a>
+        <button class="btn-icon" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="devhead devhead--tool">
+      <div class="container">
+        <nav class="crumbs" aria-label="Trilha de navegação">
+          <a href="../../">Currículo</a><span aria-hidden="true"> › </span><a href="../">Ferramentas Dev</a><span aria-hidden="true"> › </span><span aria-current="page">Gerador de CPF</span>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container layout">
+      <nav class="menu" aria-label="Ferramentas">
+        <div class="menu__group">
+          <p class="menu__title">Documentos</p>
+          <ul>
+            <li><a href="./" data-tool="cpf" aria-current="page">Gerador de CPF</a></li>
+            <li><a href="../gerador-cnpj/" data-tool="cnpj">Gerador de CNPJ</a></li>
+            <li><a href="../validador-cpf-cnpj/" data-tool="validar">Validador CPF/CNPJ</a></li>
+          </ul>
+        </div>
+        <div class="menu__group">
+          <p class="menu__title">Geradores</p>
+          <ul>
+            <li><a href="../gerador-uuid/" data-tool="uuid">UUID</a></li>
+            <li><a href="../gerador-senha/" data-tool="senha">Senhas</a></li>
+          </ul>
+        </div>
+        <div class="menu__group">
+          <p class="menu__title">Texto e dados</p>
+          <ul>
+            <li><a href="../formatador-json/" data-tool="json">JSON</a></li>
+            <li><a href="../base64-url/" data-tool="base64">Base64 / URL</a></li>
+            <li><a href="../testador-regex/" data-tool="regex">Testador de regex</a></li>
+          </ul>
+        </div>
+        <div class="menu__group">
+          <p class="menu__title">Depuração</p>
+          <ul>
+            <li><a href="../decodificador-jwt/" data-tool="jwt">Decodificador JWT</a></li>
+            <li><a href="../hash-md5-sha/" data-tool="hash">Hash MD5 / SHA</a></li>
+            <li><a href="../timestamp-unix/" data-tool="tempo">Timestamp Unix</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="panel">
+<article class="tool" id="tool-cpf" aria-labelledby="cpf-title">
+          <h1 id="cpf-title">Gerador de CPF</h1>
+          <p class="tool__desc">CPFs aleatórios com dígitos verificadores válidos. Apenas para testes.</p>
+          <div class="tool__opts">
+            <label class="field"><span>Quantidade</span><input type="number" id="cpf-qty" min="1" max="100" value="1" inputmode="numeric" /></label>
+            <label class="field"><span>Estado de emissão</span>
+              <select id="cpf-uf">
+                <option value="">Qualquer</option>
+                <option value="1">DF · GO · MS · MT · TO</option>
+                <option value="2">AC · AM · AP · PA · RO · RR</option>
+                <option value="3">CE · MA · PI</option>
+                <option value="4">AL · PB · PE · RN</option>
+                <option value="5">BA · SE</option>
+                <option value="6">MG</option>
+                <option value="7">ES · RJ</option>
+                <option value="8">SP</option>
+                <option value="9">PR · SC</option>
+                <option value="0">RS</option>
+              </select>
+            </label>
+            <label class="check"><input type="checkbox" id="cpf-mask" checked /> <span>Com pontuação</span></label>
+          </div>
+          <div class="tool__actions">
+            <button type="button" class="btn btn--primary btn--sm" id="cpf-gen">Gerar</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="cpf-copyall">Copiar todos</button>
+          </div>
+          <ul class="results" id="cpf-out" aria-live="polite"></ul>
+        </article>
+        <section class="tool-about" aria-labelledby="about-title">
+          <h2 id="about-title">Sobre esta ferramenta</h2>
+          <p>Os CPFs gerados seguem o algoritmo oficial dos dois dígitos verificadores (módulo 11) e o nono dígito indica a região fiscal de emissão. São números fictícios, úteis para popular bancos de teste, validar formulários e automatizar testes — nunca para fins fraudulentos.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="devfoot">
+    <div class="container">
+      <p>Os números gerados são fictícios e servem apenas para testes e desenvolvimento. Não os utilize para fins fraudulentos.</p>
+    </div>
+  </footer>
+
+  <script src="../../devtools/dev.js"></script>
+</body>
+</html>

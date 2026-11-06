@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UUID v4 and v7 generator online | Fábio Fila</title>
+  <meta name="description" content="Generate v4 (random) and v7 (time-ordered, great for primary keys) UUIDs. In bulk, with or without hyphens, right in your browser." />
+  <meta name="author" content="Fábio Fila" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://curriculo.fabiofila.com.br/devtools/gerador-uuid/" />
+  <link rel="alternate" hreflang="en" href="https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/" />
+  <link rel="alternate" hreflang="x-default" href="https://curriculo.fabiofila.com.br/devtools/gerador-uuid/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fábio Fila" />
+  <meta property="og:title" content="UUID v4 and v7 generator online | Fábio Fila" />
+  <meta property="og:description" content="Generate v4 (random) and v7 (time-ordered, great for primary keys) UUIDs. In bulk, with or without hyphens, right in your browser." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:url" content="https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/" />
+  <meta property="og:image" content="https://curriculo.fabiofila.com.br/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dev Tools — Fábio Fila" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UUID v4 and v7 generator online | Fábio Fila" />
+  <meta name="twitter:description" content="Generate v4 (random) and v7 (time-ordered, great for primary keys) UUIDs. In bulk, with or without hyphens, right in your browser." />
+  <meta name="twitter:image" content="https://curriculo.fabiofila.com.br/assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../../devtools/dev.css" />
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../../../assets/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../../../assets/apple-touch-icon.png" />
+  <script>
+    // aplica o tema antes da renderização para evitar flash
+    try {
+      var t = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "UUID generator",
+  "url": "https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/",
+  "description": "Generate v4 (random) and v7 (time-ordered, great for primary keys) UUIDs. In bulk, with or without hyphens, right in your browser.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fábio Fila",
+    "url": "https://curriculo.fabiofila.com.br/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Résumé",
+      "item": "https://curriculo.fabiofila.com.br/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Dev Tools",
+      "item": "https://curriculo.fabiofila.com.br/en/devtools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "UUID generator",
+      "item": "https://curriculo.fabiofila.com.br/en/devtools/gerador-uuid/"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Skip to content</a>
+
+  <header class="nav scrolled">
+    <div class="container nav__inner">
+      <a href="../../" class="nav__brand">
+        <span class="nav__logo" aria-hidden="true">FF</span>
+        <span class="nav__name">Fábio&nbsp;Fila</span>
+      </a>
+      <div class="nav__actions">
+        <a href="../../" class="btn btn--ghost btn--sm">← Résumé</a>
+        <a class="btn-icon" id="langToggle" href="../../../devtools/gerador-uuid/" hreflang="pt-BR" lang="pt-BR" title="Versão em português"><span>PT</span><span class="sr-only"> — Mudar para português</span></a>
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle light/dark theme" title="Theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="devhead devhead--tool">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../../">Résumé</a><span aria-hidden="true"> › </span><a href="../">Dev Tools</a><span aria-hidden="true"> › </span><span aria-current="page">UUID generator</span>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container layout">
+      <nav class="menu" aria-label="Tools">
+        <div class="menu__group">
+          <p class="menu__title">Documents</p>
+          <ul>
+            <li><a href="../gerador-cpf/" data-tool="cpf">CPF generator</a></li>
+            <li><a href="../gerador-cnpj/" data-tool="cnpj">CNPJ generator</a></li>
+            <li><a href="../validador-cpf-cnpj/" data-tool="validar">CPF/CNPJ validator</a></li>
+          </ul>
+        </div>
+        <div class="menu__group">
+          <p class="menu__title">Generators</p>
+          <ul>
+            <li><a href="./" data-tool="uuid" aria-current="page">UUID</a></li>
+            <li><a href="../gerador-senha/" data-tool="senha">Passwords</a></li>
+          </ul>
+        </div>
+        <div class="menu__group">
+          <p class="menu__title">Text & data</p>
+          <ul>
+            <li><a href="../formatador-json/" data-tool="json">JSON</a></li>
+            <li><a href="../base64-url/" data-tool="base64">Base64 / URL</a></li>
+            <li><a href="../testador-regex/" data-tool="regex">Regex tester</a></li>
+          </ul>
+        </div>
+        <div class="menu__group">
+          <p class="menu__title">Debugging</p>
+          <ul>
+            <li><a href="../decodificador-jwt/" data-tool="jwt">JWT decoder</a></li>
+            <li><a href="../hash-md5-sha/" data-tool="hash">MD5 / SHA hash</a></li>
+            <li><a href="../timestamp-unix/" data-tool="tempo">Unix timestamp</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="panel">
+<article class="tool" id="tool-uuid" aria-labelledby="uuid-title">
+          <h1 id="uuid-title">UUID generator</h1>
+          <p class="tool__desc">v4 (random) or v7 (time-ordered, great for primary keys) UUIDs.</p>
+          <div class="tool__opts">
+            <label class="field"><span>Quantity</span><input type="number" id="uuid-qty" min="1" max="100" value="1" inputmode="numeric" /></label>
+            <label class="field"><span>Version</span>
+              <select id="uuid-ver"><option value="4">v4</option><option value="7">v7</option></select>
+            </label>
+            <label class="check"><input type="checkbox" id="uuid-upper" /> <span>Uppercase</span></label>
+            <label class="check"><input type="checkbox" id="uuid-dash" checked /> <span>With hyphens</span></label>
+          </div>
+          <div class="tool__actions">
+            <button type="button" class="btn btn--primary btn--sm" id="uuid-gen">Generate</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="uuid-copyall">Copy all</button>
+          </div>
+          <ul class="results" id="uuid-out" aria-live="polite"></ul>
+        </article>
+        <section class="tool-about" aria-labelledby="about-title">
+          <h2 id="about-title">About this tool</h2>
+          <p>UUID v4 is fully random; v7 starts with a millisecond timestamp, which keeps rows ordered and reduces index fragmentation in databases. Values come from the browser's cryptographic API.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="devfoot">
+    <div class="container">
+      <p>Generated numbers are fictitious and meant only for testing and development. Do not use them for fraudulent purposes.</p>
+    </div>
+  </footer>
+
+  <script src="../../../devtools/dev.js"></script>
+</body>
+</html>

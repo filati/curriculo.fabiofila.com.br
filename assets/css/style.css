@@ -362,3 +362,7 @@ ul { list-style: none; }
   .skill-card, .project, .timeline__card, .ai__card, .info-card, .contact__item { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
   a { color: #000; }
 }
+
+/* Link "Ferramentas Dev" no menu */
+.nav__links a.nav__dev { color: var(--primary); border: 1.5px solid var(--border); font-family: var(--mono); font-size: .85rem; }
+.nav__links a.nav__dev:hover { border-color: var(--primary); }
